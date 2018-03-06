@@ -1,0 +1,173 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>North End</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+	html {
+    background-image: url("Glasgow copy.jpg");
+    background-repeat: no-repeat;
+	}
+
+	#openmenu {
+		position: fixed;
+		top: 5%;
+		left: 5%;
+		color: black;
+		font-size:20px;
+		font-family: Trebuchet MS;
+		cursor:pointer;
+	}
+	
+	h2 {
+		font-size:40px;
+	}
+	
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: black;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+}
+	
+	.sidenav a {
+		padding: 9px 9px 9px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: Trebuchet MS;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: white;
+	}
+	
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+	}
+
+	#header_container {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: none;
+		opacity: 1;
+		color: black;
+		text-align: center;
+		font-family: "Trebuchet MS"
+	}
+	
+	#footer_container {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: black;
+		opacity: 0.8;
+		padding: 20px;
+		color: white;
+		text-align: center;
+		font-family: "Trebuchet MS"
+	}
+	
+	.fa:hover {
+		fill: red !important;
+	}
+	
+	.fa {
+		padding: 13px;
+		font-size: 30px;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 10px;
+		border-radius: 50%;
+	}
+
+	.fa-facebook {
+		background: white;
+		color: black;
+	}
+	
+	.fa-twitter {
+		background: white;
+		color: black;
+	}
+	
+	.fa-pinterest {
+		background: white;
+		color: black;	
+	}
+	
+	.fa-instagram {
+		background: white;
+		color: black;
+	}
+	
+</style>
+</head>
+<body>
+
+<!--header-->
+<div id="header_container">
+<h2>North End</h2>
+</div>
+
+<!--side navigation divider-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">ABOUT</a>
+  <a href="#">CITY CENTRE</a>
+  <a href="#">NORTH END</a>
+  <a href="#">EAST END</a>
+  <a href="#">SOUTH SIDE</a>
+  <a href="#">WEST END</a>
+  <a href="#">CONTACT</a>
+</div>
+
+<!--open menu button-->
+<div id="openmenu"><span onclick="openNav()">&#9776; OPEN</span></div>
+</div>
+
+<!--image grid-->
+
+<!--footer-->
+
+<div id="footer_container">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+<script>
+<!--side navigation bar functions-->
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
