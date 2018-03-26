@@ -16,7 +16,7 @@
 		cursor:pointer;
 	}
 	
-	h2 {
+	h1 {
 		font-size:40px;
 	}
 	
@@ -37,7 +37,7 @@
 		padding: 9px 9px 9px 32px;
 		text-decoration: none;
 		font-size: 20px;
-		font-family: "Helvetica";
+		font-family: "Palatino";
 		color: #818181;
 		display: block;
 		transition: 0.3s;
@@ -119,14 +119,16 @@
 		color: #3D3C3C;
 	}
 
+	
+
 	body {
-        position: relative;
-        min-height: 100vh;
-        background-color: white;
-        padding-bottom: 60%;
-        padding: 20px;
-        font-family: "Palatino";
-        margin: 0;
+		 position: relative;
+		 min-height: 100vh;
+		 background-color: white;
+		 padding-bottom: 60%;
+         padding: 20px;
+		 font-family: "Times";
+		 margin: 0;
 	}
 
 
@@ -139,9 +141,9 @@
 
 	.paragraph {
 		text-align: justify;
-	        margin-left: 25%;
-	        margin-right: 25%;
-	        padding-top: 0;
+	    margin-left: 25%;
+	    margin-right: 25%;
+	    padding-top: 0;
 	}
 
 	#image {
@@ -155,7 +157,7 @@
 	}
 
 
-/* The Modal (background) */
+	/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -170,14 +172,14 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Map button button style elements */
+/* Modal Content */
 .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    font-family: "Palatino";
+    font-family: "Times";
 }
 
 /* The Close Button */
@@ -192,10 +194,10 @@
 .close:focus {
     color: #000;
     text-decoration: none;
-    font-family: "Palatino";
+    font-family: "Times";
     cursor: pointer;
 }
-    
+/* button style elements */
 #myBtn {
 background-color: #3D3C3C;
 position: absolute;
@@ -208,6 +210,7 @@ right: 160px;
 	padding-bottom: 17px;
 	padding-right: 10px;
     text-align: center;
+    text-decoration: none;
     font-size: 16px;
     margin: 4px 2px; 
     cursor: pointer;
@@ -216,9 +219,8 @@ right: 160px;
 	}
 #myBtn:hover {
 background-color: #555;}
-/*end of map button style elements*/
+/*end of modal */
 
-/*pull up button that allows you to go back up when you've scrolled down*/   
 #myBtn1 {
   display: none;
   position: fixed;
@@ -226,7 +228,6 @@ background-color: #555;}
   right: 30px;
   z-index: 99;
   font-size: 16px;
-font-family: "Palatino";
   border: none;
   outline: none;
   background-color: #3D3C3C;
@@ -242,22 +243,22 @@ font-family: "Palatino";
 #myBtn1:hover {
   background-color: #555;
 }
-/*end of pull up button commands*/
+
 </style>
 </head>
 <body>
 
 <!--header-->
 <div id="header_container">
-<h2>Tramway</h2>
+<h1>Tramway</h1>
 </div>
 
 <!--side navigation divider-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">HOMEPAGE</a>
+  <a href="#">HOME</a>
   <a href="#">CITY CENTRE</a>
-  <a href="#">NORTH END</a>
+  <a href="#">NORTH</a>
   <a href="#">EAST END</a>
   <a href="#">SOUTH SIDE</a>
   <a href="#">WEST END</a>
@@ -268,7 +269,7 @@ font-family: "Palatino";
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
 </div>
 <button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
-	
+
 <!--image grid-->
 <div class="content">
  <img src="websouthside/Tramway2.jpg" alt="Tramway" style="width:50%">
@@ -291,13 +292,14 @@ font-family: "Palatino";
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
- <!-- Trigger/Open The Modal -->
+<!-- Trigger/Open The Modal -->
 <button id="myBtn">
-Map
+MAP
 </button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
+
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -314,7 +316,6 @@ Map
 </div>
 </div>
 </div>
-
 <script>
 
 <!--side navigation bar functions-->
