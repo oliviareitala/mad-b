@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+function initMap() {
+	
+	var pipe = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Pipe+Factory/@55.8551425,-4.2355203,15z/data=!4m2!3m1!1s0x0:0x5312dc1d0ba3c944?sa=X&ved=0ahUKEwjO9daY9vrZAhVHKFAKHW67AYcQ_BIIiAEwEA"><strong>The Pipe Factory</strong><br>42 Bain St <br> Glasgow, G20 4LA<br>\</a>',
+		lat: 55.8551425,
+		long: -4.235520299999962,
+	};
+
+	var drygate = {
+		info: '<a href="https://www.google.co.uk/maps/place/Drygate+Brewing+Co./@55.8602006,-4.2355138,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a8fed0a083:0xddd5e95151292d68!8m2!3d55.8602006!4d-4.2333251"><strong>Drygate Brewing Co</strong><br>85 Drygate <br> Glasgow, G4 0UT<br>\</a>',
+		lat: 55.8602006,
+		long: -4.233325100000002,
+	};
+
+	var baad = {
+		info: '<a href="https://www.google.co.uk/maps/place/Barras+Art+and+Design/@55.854596,-4.2391607,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a576725869:0x3dd12e7f89bd6164!8m2!3d55.854596!4d-4.236972"><strong>Barras Art and Design</strong><br>54 Calton Entry <br> Glasgow, G40 2SB<br>\</a>',
+		lat: 55.85459600000001,
+		long: -4.236972000000037,
+	};
+	
+	var mono = {
+		info: '<a href="https://www.google.co.uk/maps/place/Mono/@55.8556568,-4.2483053,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a3b2d08559:0x6697d4f6eb79a218!8m2!3d55.8556568!4d-4.2461166"><strong>Mono</strong><br>12 King St <br> Glasgow, G1 5RB<br>\</a>',
+		lat: 55.8556568,
+		long: -4.24611660000005,
+	};
+	
+	var photoworks = {
+		info: '<a href="https://www.google.co.uk/maps/place/Street+Level+Photoworks/@55.8566391,-4.2488859,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a3d4367323:0x71b31b9fc520770d!8m2!3d55.8566391!4d-4.2466972"><strong>Street Level Photoworks</strong><br>103 Trongate <br> Glasgow, G1 5HD<br>\</a>',
+
+		lat: 55.8566391,
+		long: -4.246697199999971,
+	};
+
+	var locations = [
+      [pipe.info, pipe.lat, pipe.long, 0],
+      [drygate.info, drygate.lat, drygate.long, 1],
+      [baad.info, baad.lat, baad.long, 2],
+	  [mono.info, mono.lat, mono.long, 3],
+	  [photoworks.info, photoworks.lat, photoworks.long, 4],
+    ];
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 15,
+		center: new google.maps.LatLng(55.85911234314616,-4.238903321951284),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	var infowindow = new google.maps.InfoWindow({});
+
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
+    </script>
+  </body>
+</html>

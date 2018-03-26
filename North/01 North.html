@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+#map {
+        height: 400px;
+        width: 100%;
+       }
+  </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+function initMap() {
+	
+	var glue = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Glue+Factory/@55.8741703,-4.2625317,17z/data=!3m1!4b1!4m5!3m4!1s0x4888443cbab61a19:0x5b987bf98adff0c8!8m2!3d55.8741703!4d-4.260343"><strong>The Glue Factory</strong><br>22 Farnell St <br> Glasgow, G4 9SE<br>\</a>',
+		lat: 55.8741703,
+		long: -4.260343000000034,
+	};
+
+	var whisky = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Whisky+Bond/@55.876365,-4.2602627,17z/data=!3m1!4b1!4m5!3m4!1s0x4888443c54fae5fb:0xe77a2c486bd17fa8!8m2!3d55.876365!4d-4.258074"><strong>The Whisky Bond</strong><br>2 Dawson Rd <br> Glasgow, G4 9SS<br>\</a>',
+		lat: 55.876365,
+		long: -4.258073999999965,
+	};
+
+	var civic = {
+		info: '<a href="https://www.google.co.uk/maps/place/Civic+House,+26+Civic+St,+Glasgow+G4+9RH/@55.8709055,-4.2612829,17z/data=!3m1!4b1!4m5!3m4!1s0x48884423715dd8e7:0xc37cfc414b32eea2!8m2!3d55.8709055!4d-4.2590942"><strong>Civic House</strong><br>26 Civic St  <br> Glasgow, G4 9RH<br>\</a>',
+		lat: 55.87090550000001,
+		long: -4.259094199999936,
+	};
+	
+	var mack = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Mackintosh+Church,+Queen%E2%80%99s+Cross/@55.8802824,-4.2739943,17z/data=!3m1!4b1!4m5!3m4!1s0x488844371444066b:0xb57f5708c88e9fd9!8m2!3d55.8802824!4d-4.2718056"><strong>The Mackintosh Church</strong><br>870 Garscube Rd <br> Glasgow, G20 7EL<br>\</a>',
+		lat: 55.8802824,
+		long: -4.271805599999993,
+	};
+	
+	var strath = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Strathmore/@55.882362,-4.2814907,17z/data=!3m1!4b1!4m5!3m4!1s0x48884435be4dd6b7:0x212d8287f88cca68!8m2!3d55.882362!4d-4.279302"><strong>The Strathmore</strong><br>795 Maryhill Rd <br> Glasgow, G20 7TL<br>\</a>',
+		lat: 55.882362,
+		long: -4.27930200000003,
+	};
+
+	var locations = [
+      [glue.info, glue.lat, glue.long, 0],
+      [whisky.info, whisky.lat, whisky.long, 1],
+      [civic.info, civic.lat, civic.long, 2],
+	  [mack.info, mack.lat, mack.long, 3],
+	  [strath.info, strath.lat, strath.long, 4],
+    ];
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 14,
+		center: new google.maps.LatLng(55.88002403819931,-4.266915558769256),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	var infowindow = new google.maps.InfoWindow({});
+
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
+    </script>
+  </body>
+</html>
