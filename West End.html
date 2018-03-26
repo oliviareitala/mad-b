@@ -1,0 +1,539 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>West End</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+	#openmenu {
+		position: fixed;
+		top: 5%;
+		left: 5%;
+		color: black;
+		font-size:20px;
+		font-family: "Palatino";
+		cursor:pointer;
+	}
+	
+	h1 {
+		font-size:40px;
+    text-align: center;
+	}
+	
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #3d3c3c;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+}
+	
+	.sidenav a {
+		padding: 9px 9px 9px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: "palatino";
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: white;
+	}
+	
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+	}
+
+	#header_container {
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: none;
+		opacity: 1;
+		color: black;
+		text-align: center;
+		font-family: "palatino"
+	}
+
+	#footer_container {
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+    height: 60px;
+		width: 100%;
+		background-color: #3d3c3C;
+		padding: 20px;
+		color: white;
+		text-align: center;
+		font-family: "palatino",
+	}
+	
+	.fa:hover {
+		fill: red !important;
+	}
+	
+	.fa {
+		padding: 13px;
+		font-size: 20px;
+		width: 20px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 10px;
+		border-radius: 50%;
+		}
+
+	.fa-facebook {
+		background: white;
+		color: #3D3C3C;
+	}
+	
+	.fa-twitter {
+		background: white;
+		color: #3D3C3C;
+	}
+	
+	.fa-pinterest {
+		background: white;
+		color: #3D3C3C;	
+	}
+	
+	.fa-instagram {
+		background: white;
+		color: #3D3C3C;
+	}
+
+	img {
+		width: 25%;
+		height: 40%;
+		padding: 1%;
+	}
+
+<!-- GRID CSS -->
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    padding: 20px;
+    font-family: "Times";
+    margin: 0;
+}
+
+/* Center website */
+.main {
+    
+    margin-left: 125px;
+	
+}
+
+.row {
+    float:center;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 40%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+ background-color: white;
+ padding: 10px;
+ text-align: center;
+}
+
+#table {min-width: 1000px;
+       margin-left: 5%;
+       padding-bottom: 15px;}
+
+a:link {
+        text-decoration: none;
+        color: black;
+}
+a:active {
+         color:black;
+}
+
+a:visited {
+          color: black;
+}
+
+a:hover {
+         text-decoration: none;
+         color: black;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: "Times";
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Times";
+}
+/* button style elements */
+#myBtn {
+background-color: #3D3C3C;
+position: absolute;
+right: 160px;
+    border: none;
+	font-family:"Palatino";
+    color: white;
+    padding-top: 17px;
+	padding-left: 10px;
+	padding-bottom: 17px;
+	padding-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+	border-radius: 4px;
+	margin-top: 7px;
+	}
+#myBtn:hover {
+background-color: #555;}
+
+/*end of modal */
+#myBtn1 {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #3D3C3C;
+  color: white;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-left: 17px;
+  padding-bottom: 10px;
+  padding-right: 17px;
+  border-radius: 4px;
+}
+
+#myBtn1:hover {
+  background-color: #555;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+</style>
+</head>
+<body>
+
+<!--header-->
+<div id="header_container">
+<h1>West End</h1>
+</div>
+
+<!--side navigation divider-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">HOME</a>
+  <a href="#">CITY CENTRE</a>
+  <a href="#">NORTH END</a>
+  <a href="#">EAST END</a>
+  <a href="#">SOUTH SIDE</a>
+  <a href="#">ABOUT</a>
+</div>
+
+<!--open menu button-->
+<div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
+</div>
+<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
+
+<!-- MAIN IMAGE GRID(Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div id="table">
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <a href="ADD LINK"><img src="ADD IMAGE" alt="SWG3" style="width:100%">
+      <h3>SWG3</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="New Glasgow Society" style="width:100%">
+      <h3>New Glasgow Society</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="Tchai Ovna" style="width:100%">
+      <h3>Tchai Ovna</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="Duke's Bar" style="width:100%">
+      <h3>Duke's Bar</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="For Fika Sake" style="width:100%">
+      <h3>For Fika Sake</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="Index.html"><img src="Glasgow.jpg" alt="Homepage" style="width:100%">
+      <h3>Homepage </h3></a>
+    </div>
+  </div>
+</div>
+
+<!-- END GRID -->
+</div>
+<br>
+<br>
+<br>
+
+<!--footer-->
+<div id="footer_container">
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">
+MAP
+</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="map"></div>
+
+ <script>
+function initMap() {
+	
+	var tchai = {
+		info: '<a href="https://www.google.co.uk/maps/place/Tchai-Ovna+House+of+Tea/@55.8728054,-4.2841437,17z/data=!3m1!4b1!4m5!3m4!1s0x48884432a7dd6359:0x297aa1c265d4dd75!8m2!3d55.8728054!4d-4.281955"><strong>Tchai-Ovna House of Tea</strong><br>42 Otago Ln<br> Glasgow, G12 8PB<br>\</a>',
+		lat: 55.8728054,
+		long: -4.281955000000039
+	};
+
+	var swg3 = {
+		info: '<a href="https://www.google.co.uk/maps/place/SWG3+Studio+Warehouse/@55.864523,-4.3018737,17z/data=!3m1!4b1!4m5!3m4!1s0x488845d835515a49:0x49a638f09124556d!8m2!3d55.864523!4d-4.299685"><strong>SWG3 Studio Warehouse</strong><br>100 Eastvale Pl<br> Glasgow, G3 8QG<br>\</a>',
+		lat: 55.864523,
+		long: -4.299684999999954
+	};
+
+	var fika = {
+		info: '<a href="https://www.google.co.uk/maps/place/For+Fika+Sake/@55.8704173,-4.3045786,17z/data=!3m1!4b1!4m5!3m4!1s0x488845db142b40e7:0xecd28a8851ca1831!8m2!3d55.8704173!4d-4.3023899"><strong>For Fika Sake</strong><br>7 Keith St<br> Glasgow, G11 6QQ<br>\</a>',
+		lat: 55.8704173,
+		long: -4.30238989999998
+	};
+	
+	var dukes = {
+		info: '<a href="https://www.google.co.uk/maps/place/Dukes+Bar+Ltd/@55.8704173,-4.3045786,17z/data=!4m5!3m4!1s0x488845d1321f864b:0x5d4087cee01c1077!8m2!3d55.8670035!4d-4.2921758"><strong>Dukes Bar Ltd</strong><br>41 Old Dumbarton Rd<br> Glasgow, G3 8RD<br>\</a>',
+		lat: 55.8670035,
+		long: -4.292175799999995
+	};
+	
+	var society = {
+		info: '<a href="https://www.google.co.uk/maps/place/New+Glasgow+Society/@55.8670035,-4.2943645,17z/data=!4m5!3m4!1s0x488845d6ace6ac4f:0xee4f64404b5ef93a!8m2!3d55.86648!4d-4.2900637"><strong>New Glasgow Society</strong><br>1307 Argyle St <br> Glasgow, G3 8TL<br>\</a>',
+		lat: 55.86648,
+		long: -4.290063700000019
+	};
+
+	var locations = [
+      [tchai.info, tchai.lat, tchai.long, 0],
+      [swg3.info, swg3.lat, swg3.long, 1],
+      [fika.info, fika.lat, fika.long, 2],
+	  [dukes.info, dukes.lat, dukes.long, 3],
+	  [society.info, society.lat, society.long, 4],
+    ];
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 14,
+		center: new google.maps.LatLng(55.8708895,-4.2950304),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	var infowindow = new google.maps.InfoWindow({});
+
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
+    </script>
+
+	</center>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+<!--side navigation bar functions-->
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn1").style.display = "block";
+    } else {
+        document.getElementById("myBtn1").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
