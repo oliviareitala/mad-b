@@ -159,10 +159,6 @@
 		font-family: "palatino";
 	}
 	
-	.fa:hover {
-		fill: red !important;
-	}
-	
 	.fa {
 		padding: 13px;
 		font-size: 20px;
@@ -342,8 +338,8 @@
 <a href="#" class="fa fa-pinterest"></a>
 <a href="#" class="fa fa-instagram"></a>
 </div>
+<!--svg info box function-->
 <script>
-<!--svg map's info box function-->
 $("path, circle").hover(function(e) {
   $('#info-box').css('display','block');
   $('#info-box').html($(this).data('info'));
