@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-<title>West End</title>
+<title>East End</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -298,7 +298,7 @@ background-color: #555;}
 
 <!--header-->
 <div id="header_container">
-<h1>West End</h1>
+<h1>East End</h1>
 </div>
 
 <!--side navigation divider-->
@@ -306,8 +306,8 @@ background-color: #555;}
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">HOME</a>
   <a href="citycentre.html">CITY CENTRE</a>
-  <a href="North.html">NORTH END</a>
-  <a href="East End.html">EAST END</a>
+  <a href="West End.html">WEST END</a>
+  <a href="North.html">NORTH</a>
   <a href="Southside.html">SOUTH SIDE</a>
   <a href="aboutpage.html">ABOUT</a>
 </div>
@@ -325,38 +325,38 @@ background-color: #555;}
 <div class="row">
   <div class="column">
     <div class="content">
-      <a href="ADD LINK"><img src="ADD IMAGE" alt="SWG3" style="width:100%">
-      <div class="venuename"><h3>SWG3</h3></div></a>
+      <a href="ADD LINK"><img src="ADD IMAGE" alt="Barras Art and Design" style="width:100%">
+      <div class="venuename"><h3>Barras Art and Design</h3></div></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="New Glasgow Society" style="width:100%">
-      <h3>New Glasgow Society</h3></a>
+    <a href="ADD LINK"><img src="ADD LINK" alt="The Pipe Factory" style="width:100%">
+      <h3>The Pipe Factory</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="Tchai Ovna" style="width:100%">
-      <h3>Tchai Ovna</h3></a>
+    <a href="ADD LINK"><img src="ADD LINK" alt="Drygate Brewery" style="width:100%">
+      <h3>Drygate Brewery</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="Duke's Bar" style="width:100%">
-      <h3>Duke's Bar</h3></a>
+    <a href="ADD LINK"><img src="ADD LINK" alt="Mono" style="width:100%">
+      <h3>Mono</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="For Fika Sake" style="width:100%">
-      <h3>For Fika Sake</h3></a>
+    <a href="ADD LINK"><img src="ADD LINK" alt="Street Level Photowork" style="width:100%">
+      <h3>Street Level Photowork</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
     <a href="Index.html"><img src="Glasgow.jpg" alt="Homepage" style="width:100%">
-      <h3>Homepage </h3></a>
+      <h3>Home</h3></a>
     </div>
   </div>
 </div>
@@ -385,52 +385,52 @@ MAP
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <div id="map"></div>
-
- <script>
+ <div id="map"></div>
+<script>
 function initMap() {
 	
-	var tchai = {
-		info: '<a href="https://www.google.co.uk/maps/place/Tchai-Ovna+House+of+Tea/@55.8728054,-4.2841437,17z/data=!3m1!4b1!4m5!3m4!1s0x48884432a7dd6359:0x297aa1c265d4dd75!8m2!3d55.8728054!4d-4.281955"><strong>Tchai-Ovna House of Tea</strong><br>42 Otago Ln<br> Glasgow, G12 8PB<br>\</a>',
-		lat: 55.8728054,
-		long: -4.281955000000039
+	var pipe = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Pipe+Factory/@55.8551425,-4.2355203,15z/data=!4m2!3m1!1s0x0:0x5312dc1d0ba3c944?sa=X&ved=0ahUKEwjO9daY9vrZAhVHKFAKHW67AYcQ_BIIiAEwEA"><strong>The Pipe Factory</strong><br>42 Bain St <br> Glasgow, G20 4LA<br>\</a>',
+		lat: 55.8551425,
+		long: -4.235520299999962,
 	};
 
-	var swg3 = {
-		info: '<a href="https://www.google.co.uk/maps/place/SWG3+Studio+Warehouse/@55.864523,-4.3018737,17z/data=!3m1!4b1!4m5!3m4!1s0x488845d835515a49:0x49a638f09124556d!8m2!3d55.864523!4d-4.299685"><strong>SWG3 Studio Warehouse</strong><br>100 Eastvale Pl<br> Glasgow, G3 8QG<br>\</a>',
-		lat: 55.864523,
-		long: -4.299684999999954
+	var drygate = {
+		info: '<a href="https://www.google.co.uk/maps/place/Drygate+Brewing+Co./@55.8602006,-4.2355138,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a8fed0a083:0xddd5e95151292d68!8m2!3d55.8602006!4d-4.2333251"><strong>Drygate Brewing Co</strong><br>85 Drygate <br> Glasgow, G4 0UT<br>\</a>',
+		lat: 55.8602006,
+		long: -4.233325100000002,
 	};
 
-	var fika = {
-		info: '<a href="https://www.google.co.uk/maps/place/For+Fika+Sake/@55.8704173,-4.3045786,17z/data=!3m1!4b1!4m5!3m4!1s0x488845db142b40e7:0xecd28a8851ca1831!8m2!3d55.8704173!4d-4.3023899"><strong>For Fika Sake</strong><br>7 Keith St<br> Glasgow, G11 6QQ<br>\</a>',
-		lat: 55.8704173,
-		long: -4.30238989999998
+	var baad = {
+		info: '<a href="https://www.google.co.uk/maps/place/Barras+Art+and+Design/@55.854596,-4.2391607,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a576725869:0x3dd12e7f89bd6164!8m2!3d55.854596!4d-4.236972"><strong>Barras Art and Design</strong><br>54 Calton Entry <br> Glasgow, G40 2SB<br>\</a>',
+		lat: 55.85459600000001,
+		long: -4.236972000000037,
 	};
 	
-	var dukes = {
-		info: '<a href="https://www.google.co.uk/maps/place/Dukes+Bar+Ltd/@55.8704173,-4.3045786,17z/data=!4m5!3m4!1s0x488845d1321f864b:0x5d4087cee01c1077!8m2!3d55.8670035!4d-4.2921758"><strong>Dukes Bar Ltd</strong><br>41 Old Dumbarton Rd<br> Glasgow, G3 8RD<br>\</a>',
-		lat: 55.8670035,
-		long: -4.292175799999995
+	var mono = {
+		info: '<a href="https://www.google.co.uk/maps/place/Mono/@55.8556568,-4.2483053,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a3b2d08559:0x6697d4f6eb79a218!8m2!3d55.8556568!4d-4.2461166"><strong>Mono</strong><br>12 King St <br> Glasgow, G1 5RB<br>\</a>',
+		lat: 55.8556568,
+		long: -4.24611660000005,
 	};
 	
-	var society = {
-		info: '<a href="https://www.google.co.uk/maps/place/New+Glasgow+Society/@55.8670035,-4.2943645,17z/data=!4m5!3m4!1s0x488845d6ace6ac4f:0xee4f64404b5ef93a!8m2!3d55.86648!4d-4.2900637"><strong>New Glasgow Society</strong><br>1307 Argyle St <br> Glasgow, G3 8TL<br>\</a>',
-		lat: 55.86648,
-		long: -4.290063700000019
+	var photoworks = {
+		info: '<a href="https://www.google.co.uk/maps/place/Street+Level+Photoworks/@55.8566391,-4.2488859,17z/data=!3m1!4b1!4m5!3m4!1s0x488846a3d4367323:0x71b31b9fc520770d!8m2!3d55.8566391!4d-4.2466972"><strong>Street Level Photoworks</strong><br>103 Trongate <br> Glasgow, G1 5HD<br>\</a>',
+
+		lat: 55.8566391,
+		long: -4.246697199999971,
 	};
 
 	var locations = [
-      [tchai.info, tchai.lat, tchai.long, 0],
-      [swg3.info, swg3.lat, swg3.long, 1],
-      [fika.info, fika.lat, fika.long, 2],
-	  [dukes.info, dukes.lat, dukes.long, 3],
-	  [society.info, society.lat, society.long, 4],
+      [pipe.info, pipe.lat, pipe.long, 0],
+      [drygate.info, drygate.lat, drygate.long, 1],
+      [baad.info, baad.lat, baad.long, 2],
+	  [mono.info, mono.lat, mono.long, 3],
+	  [photoworks.info, photoworks.lat, photoworks.long, 4],
     ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 14,
-		center: new google.maps.LatLng(55.8708895,-4.2950304),
+		zoom: 15,
+		center: new google.maps.LatLng(55.85911234314616,-4.238903321951284),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
 
@@ -456,7 +456,6 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
     </script>
-
 	</center>
   </div>
 </div>
