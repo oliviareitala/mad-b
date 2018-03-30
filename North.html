@@ -1,0 +1,528 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>North</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+	#openmenu {
+		position: fixed;
+		top: 5%;
+		left: 5%;
+		color: black;
+		font-size:20px;
+		font-family: "Palatino";
+		cursor:pointer;
+	}
+	
+	h1 {
+		margin-top: 1.25%;
+		font-size:40px;
+		font-weight: normal;
+		text-align: center;
+	}
+	    
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #3d3c3c;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+}
+	
+	.sidenav a {
+		padding: 9px 9px 9px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: "Palatino";
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: white;
+	}
+	
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+	}
+
+	#header_container {
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: none;
+		opacity: 1;
+		color: black;
+		text-align: center;
+		font-family: "palatino"
+	}
+
+	#footer_container {
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+    height: 60px;
+		width: 100%;
+		background-color: #3d3c3C;
+		padding: 20px;
+		color: white;
+		text-align: center;
+		font-family: "palatino",
+	}
+	
+	.fa {
+		padding: 13px;
+		font-size: 20px;
+		width: 20px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 10px;
+		border-radius: 50%;
+		}
+
+	.fa-facebook {
+		background: white;
+		color: #3D3C3C;
+	}
+	
+	.fa-twitter {
+		background: white;
+		color: #3D3C3C;
+	}
+	
+	.fa-pinterest {
+		background: white;
+		color: #3D3C3C;	
+	}
+	
+	.fa-instagram {
+		background: white;
+		color: #3D3C3C;
+	}
+
+	img {
+		width: 25%;
+		height: 40%;
+		padding: 1%;
+	}
+
+<!-- GRID CSS -->
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    padding: 20px;
+    font-family: "Times";
+    margin: 0;
+overflow-x: hidden;
+}
+
+/* Center website */
+.main {
+	margin-left: 10%;
+}
+
+.row {
+    float:center;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 40%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+ background-color: white;
+ padding: 10px;
+ text-align: center;
+}
+
+#table {min-width: 1000px;
+       margin-left: 5%;
+       padding-bottom: 15px;}
+    
+/*make links all black*/
+    
+h3 {
+   color: black;
+}
+
+a:link {
+        text-decoration: none;
+}
+    
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: "Times";
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Times";
+}
+/* button style elements */
+#myBtn {
+background-color: #3D3C3C;
+position: absolute;
+right: 160px;
+    border: none;
+	font-family:"Palatino";
+    color: white;
+    padding-top: 17px;
+	padding-left: 10px;
+	padding-bottom: 17px;
+	padding-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+	border-radius: 4px;
+	margin-top: 7px;
+	}
+#myBtn:hover {
+background-color: #555;}
+
+/*end of modal */
+#myBtn1 {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #3D3C3C;
+  color: white;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-left: 17px;
+  padding-bottom: 10px;
+  padding-right: 17px;
+  border-radius: 4px;
+}
+
+#myBtn1:hover {
+  background-color: #555;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+</style>
+</head>
+<body>
+
+<!--header-->
+<div id="header_container">
+<h1>North</h1>
+</div>
+
+<!--side navigation divider-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">HOME</a>
+  <a href="citycentre.html">CITY CENTRE</a>
+  <a href="West End.html">WEST END</a>
+  <a href="#">EAST END</a>
+  <a href="Southside.html">SOUTH SIDE</a>
+  <a href="aboutpage.html">ABOUT</a>
+</div>
+
+<!--open menu button-->
+<div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
+</div>
+<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
+
+<!-- MAIN IMAGE GRID(Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div id="table">
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <a href="ADD LINK"><img src="ADD IMAGE" alt="Glue Factory" style="width:100%">
+      <div class="venuename"><h3>Glue Factory</h3></div></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="Whisky Bond" style="width:100%">
+      <h3>Whisky Bond</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="Civic House" style="width:100%">
+      <h3>Civic House</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="Queen's Cross Church" style="width:100%">
+      <h3>Queen's Cross Church</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="ADD LINK"><img src="ADD LINK" alt="The Strathmore" style="width:100%">
+      <h3>The Strathmore</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="Index.html"><img src="Glasgow.jpg" alt="Homepage" style="width:100%">
+      <h3>Home</h3></a>
+    </div>
+  </div>
+</div>
+
+<!-- END GRID -->
+</div>
+<br>
+<br>
+<br>
+
+<!--footer-->
+<div id="footer_container">
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">
+MAP
+</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+ <div id="map"></div>
+    <script>
+function initMap() {
+	
+	var glue = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Glue+Factory/@55.8741703,-4.2625317,17z/data=!3m1!4b1!4m5!3m4!1s0x4888443cbab61a19:0x5b987bf98adff0c8!8m2!3d55.8741703!4d-4.260343"><strong>The Glue Factory</strong><br>22 Farnell St <br> Glasgow, G4 9SE<br>\</a>',
+		lat: 55.8741703,
+		long: -4.260343000000034,
+	};
+
+	var whisky = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Whisky+Bond/@55.876365,-4.2602627,17z/data=!3m1!4b1!4m5!3m4!1s0x4888443c54fae5fb:0xe77a2c486bd17fa8!8m2!3d55.876365!4d-4.258074"><strong>The Whisky Bond</strong><br>2 Dawson Rd <br> Glasgow, G4 9SS<br>\</a>',
+		lat: 55.876365,
+		long: -4.258073999999965,
+	};
+
+	var civic = {
+		info: '<a href="https://www.google.co.uk/maps/place/Civic+House,+26+Civic+St,+Glasgow+G4+9RH/@55.8709055,-4.2612829,17z/data=!3m1!4b1!4m5!3m4!1s0x48884423715dd8e7:0xc37cfc414b32eea2!8m2!3d55.8709055!4d-4.2590942"><strong>Civic House</strong><br>26 Civic St  <br> Glasgow, G4 9RH<br>\</a>',
+		lat: 55.87090550000001,
+		long: -4.259094199999936,
+	};
+	
+	var mack = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Mackintosh+Church,+Queen%E2%80%99s+Cross/@55.8802824,-4.2739943,17z/data=!3m1!4b1!4m5!3m4!1s0x488844371444066b:0xb57f5708c88e9fd9!8m2!3d55.8802824!4d-4.2718056"><strong>The Mackintosh Church</strong><br>870 Garscube Rd <br> Glasgow, G20 7EL<br>\</a>',
+		lat: 55.8802824,
+		long: -4.271805599999993,
+	};
+	
+	var strath = {
+		info: '<a href="https://www.google.co.uk/maps/place/The+Strathmore/@55.882362,-4.2814907,17z/data=!3m1!4b1!4m5!3m4!1s0x48884435be4dd6b7:0x212d8287f88cca68!8m2!3d55.882362!4d-4.279302"><strong>The Strathmore</strong><br>795 Maryhill Rd <br> Glasgow, G20 7TL<br>\</a>',
+		lat: 55.882362,
+		long: -4.27930200000003,
+	};
+
+	var locations = [
+      [glue.info, glue.lat, glue.long, 0],
+      [whisky.info, whisky.lat, whisky.long, 1],
+      [civic.info, civic.lat, civic.long, 2],
+	  [mack.info, mack.lat, mack.long, 3],
+	  [strath.info, strath.lat, strath.long, 4],
+    ];
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 14,
+		center: new google.maps.LatLng(55.88002403819931,-4.266915558769256),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+
+	var infowindow = new google.maps.InfoWindow({});
+
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
+    </script>
+
+	</center>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+<!--side navigation bar functions-->
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn1").style.display = "block";
+    } else {
+        document.getElementById("myBtn1").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
