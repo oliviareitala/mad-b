@@ -193,7 +193,6 @@ input[type=submit]:hover {
     display: table;
     clear: both;
 }
-
 #contactform {
 			  position: relative;
 			  display: inline-block;
@@ -208,7 +207,6 @@ input[type=submit]:hover {
 }
 #mapsingle {
 	       position: relative;
-		   display: inline-block;
 		   float: left;
 		   margin-top: 30px;
            }
@@ -216,14 +214,14 @@ input[type=submit]:hover {
 /* Table ensuring that the map and contact form stay on the same x-axis line  */
 		   
 #contact_table {
+		position: static;
 		width: 1000px;
 		height: 500px;
 		overflow-x: hidden;
 		overflow-y: hidden;
-		margin-left: 25%;
+		margin-left: 15%;
 		margin-bottom: 100px;
 }
-
 #contact_tableWrapper {
 		width: 1300px;
 		height: 450px;
@@ -232,7 +230,6 @@ input[type=submit]:hover {
 		padding: 0;
 		overflow: hidden;
 }
-
 </style>
 </head>
 <body>
@@ -331,7 +328,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
