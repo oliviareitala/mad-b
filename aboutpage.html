@@ -140,7 +140,7 @@
 	    margin-right: 25%;
 	    padding-top: 0;
 	}
-	/* The Modal (background) */
+/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -338,6 +338,7 @@ Olivia, Silvia, Adam and Laura
 
 <div id="contact_table">
 <ul id="contact_tableWrapper">
+
 <li>
 <div id="mapsingle">
  <iframe
@@ -349,13 +350,14 @@ Olivia, Silvia, Adam and Laura
  </iframe>
 </div>
 </li>
+
 <li>
 <div id="contactform">
-	  <div class="row"><div class="column">
-      <div id="map" style="width:100%;height:500px"></div>
-    </div>
+<div class="row"><div class="column">
+<div id="map" style="width:100%;height:500px"></div>
+</div>
     <div class="column">
-      <form action="mailto:gimme5glasgow@gmail.com" method="post" enctype="text/plain"">
+      <form action="mailto:gimme5glasgow@gmail.com" method="post" enctype="text/plain">
         <label for="fname">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name...">
         <label for="email">Email</label>
@@ -367,11 +369,7 @@ Olivia, Silvia, Adam and Laura
     </div>
   </div>
 </div>
-</div>
 </li>
-</ul>
-</div>
-
 
 <!--footer-->
 <div id="footer_container">
@@ -379,28 +377,23 @@ Olivia, Silvia, Adam and Laura
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">
 MAP
 </button>
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
- <iframe
-  width="100%"
-  height="400px"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk5ufVdBGqDB98BoKzNGmninhZbMBDj1A
-    &q=Tramway" allowfullscreen>
-</iframe>
-	</center>
+    
+<!-- Modal content -->
+ <div class="modal-content">
+  <span class="close">&times;</span>
   </div>
+    
 </div>
 </div>
-</div>
-</div>
+
 <script>
 <!--side navigation bar functions-->
 function openNav() {
