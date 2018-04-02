@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
+    /*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
 		top: 5%;
@@ -16,6 +17,7 @@
 		cursor:pointer;
 	}
 	
+    /*styling main heading*/
 	h1 {
 		margin-top: 1.25%;
 		font-size:40px;
@@ -23,6 +25,7 @@
 		text-align: center;
 	}
 	
+    /*styling the left side navigation bar*/
 	.sidenav {
 		height: 100%;
 		width: 0;
@@ -63,6 +66,7 @@
 	.sidenav a {font-size: 18px;}
 	}
 
+    /*styling heading container*/
 	#header_container {
 		left: 0;
 		top: 0;
@@ -74,7 +78,7 @@
 		font-family: "Palatino";
 	}
 
-	
+	/*styling footer container*/
 	#footer_container {
 		position: absolute;
 		left: 0;
@@ -88,10 +92,8 @@
 		font-family: "palatino";
 	}
 	
-	.fa:hover {
-		fill: red !important;
-	}
-	
+
+    /*social media graphics*/
 	.fa {
 		padding: 13px;
 		font-size: 20px;
@@ -122,8 +124,7 @@
 		color: #3D3C3C;
 	}
 
-	
-
+     /*styling text etc in body*/
 	body {
 		 position: relative;
 		 min-height: 100vh;
@@ -135,7 +136,7 @@
 		 overflow-x: hidden;
 	}
 
-
+    /*text content styling on venue pages*/
 	.content {
 		     background-color: white;
 		     text-align: center;
@@ -170,7 +171,7 @@
 	}
 
 
-	/* The Modal (background) */
+	/* The Modal (background) this affects the google maps */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -211,8 +212,8 @@
     font-family: "Times";
 }
 
-/* button style elements */
-#myBtn {
+/* Styling for the pop up Google Map */
+#googlemap {
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
@@ -231,12 +232,12 @@ right: 160px;
 	border-radius: 4px;
 	margin-top: 7px;
 	}
-	
-#myBtn:hover {
+#googlemap:hover {
 background-color: #555;}
-/*end of modal */
+/*end of Google Map button styling*/
 
-#myBtn1 {
+/*Pull up button that takes you to the top of the page*/
+#arrowup {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -254,10 +255,15 @@ background-color: #555;}
   padding-right: 17px;
   border-radius: 4px;
 }
-
-#myBtn1:hover {
+#arrowup:hover {
   background-color: #555;
 }
+#map {
+        height: 400px;
+        width: 100%;
+       }
+    
+     /*making source + image credits smaller and centered*/
 
 .sources {
 	      font-size: 13px;
@@ -287,8 +293,6 @@ background-color: #555;}
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
 
 <!--image grid-->
 <div class="content">
@@ -341,10 +345,13 @@ Image credit: <a href="http://www.kinningparkcomplex.org/">kinningparkcomplex.or
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<button id="googlemap">
 MAP
 </button>
 
+<!--arrow up button-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>    
+    
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -366,7 +373,7 @@ MAP
 </div>
 <script>
 
-<!--side navigation bar functions-->
+// side navigation bar functions
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
@@ -374,12 +381,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
+// end of side nav bar functions
+    
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("googlemap");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -405,9 +413,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn1").style.display = "block";
+        document.getElementById("arrowup").style.display = "block";
     } else {
-        document.getElementById("myBtn1").style.display = "none";
+        document.getElementById("arrowup").style.display = "none";
     }
 }
 
