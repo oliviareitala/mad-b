@@ -183,57 +183,17 @@ input[type=submit]:hover {
 }
 /* Create two columns that float next to eachother */
 .column {
-    float: right;
-    width: 95%;
+    float: center;
     padding: 20px;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 100px;
 }
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-#map {
-		margin-top: 60px;
-}
-		   
-/* Table ensuring that the map and contact form stay on the same x-axis line  */
-		   
-#contact_table {
-		width: 1000px;
-		height: 500px;
-		
-		overflow-x: hidden;
-		overflow-y: hidden;
-		
-		margin-bottom: 140px;
-		margin-left: 25%;
-}
-
-#contact_tableWrapper {
-		list-style: none;
-		width: 1050px;
-		height: 500px;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-}
-
-#contact_tableWrapper > li {
-		float: left;
-		width: 32%;
-		height: 90px;
-}
-
-#contact_tableWrapper > li:nth-child(even) {
 }
 
 </style>
@@ -280,26 +240,9 @@ Olivia, Silvia, Adam and Laura
 </p>
 </div>
 
-<!--Map of G5G headquarters-->
-<div id="contact_table">
-<ul id="contact_tableWrapper">
-<li>
-<div id="map">
- <iframe
-  width="95%"
-  height="425px"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk5ufVdBGqDB98BoKzNGmninhZbMBDj1A
-    &q=11+University+Gardens,+Glasgow+G12+8QH" allowfullscreen>
- </iframe>
-</div>
-</li>
-
 <!--Contact the team form-->
 <li>
-<div id="contactform">
-<div class="row"><div class="column">
-</div>
+<div class="row">
     <div class="column">
       <form action="mailto:gimme5glasgow@gmail.com" method="post" enctype="text/plain">
         <label for="fname">Name</label>
@@ -311,12 +254,8 @@ Olivia, Silvia, Adam and Laura
         <input type="submit" value="Submit">
       </form>
     </div>
-  </div>
 </div>
 </li>
-
-</ul>
-</div>
 
 <!--footer-->
 <div id="footer_container">
