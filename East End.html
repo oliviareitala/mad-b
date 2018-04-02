@@ -240,8 +240,8 @@ a:link {
     cursor: pointer;
     font-family: "Times";
 }
-/* button style elements */
-#myBtn {
+/* Google map button style elements */
+#googlemap {
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
@@ -260,11 +260,12 @@ right: 160px;
 	border-radius: 4px;
 	margin-top: 7px;
 	}
-#myBtn:hover {
+#googlemap:hover {
 background-color: #555;}
+/*end of google map styling*/
 
-/*end of modal */
-#myBtn1 {
+/*pull up back to top of page button*/
+#arrowup {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -283,7 +284,7 @@ background-color: #555;}
   border-radius: 4px;
 }
 
-#myBtn1:hover {
+#arrowup:hover {
   background-color: #555;
 }
 
@@ -314,8 +315,6 @@ background-color: #555;}
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
 
 <!-- MAIN IMAGE GRID(Center website) -->
 <div class="main">
@@ -375,9 +374,11 @@ background-color: #555;}
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<button id="googlemap">
 MAP
 </button>
+    
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -476,7 +477,7 @@ function closeNav() {
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("googlemap");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -502,9 +503,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn1").style.display = "block";
+        document.getElementById("arrowup").style.display = "block";
     } else {
-        document.getElementById("myBtn1").style.display = "none";
+        document.getElementById("arrowup").style.display = "none";
     }
 }
 
@@ -518,11 +519,3 @@ function topFunction() {
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
