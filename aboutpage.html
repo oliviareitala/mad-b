@@ -184,7 +184,7 @@ input[type=submit]:hover {
 /* Create two columns that float next to eachother */
 .column {
     float: right;
-    width: 35%;
+    width: 100%;
     padding: 20px;
 }
 /* Clear floats after the columns */
@@ -193,11 +193,7 @@ input[type=submit]:hover {
     display: table;
     clear: both;
 }
-#contactform {
-			  position: relative;
-			  display: inline-block;
-			  
-}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column, input[type=submit] {
@@ -206,30 +202,40 @@ input[type=submit]:hover {
     }
 }
 #mapsingle {
-	       position: relative;
-		   float: left;
-		   margin-top: 30px;
-           }
+		margin-top: 70px;
+}
 		   
 /* Table ensuring that the map and contact form stay on the same x-axis line  */
 		   
 #contact_table {
-		position: static;
 		width: 1000px;
 		height: 500px;
+		
 		overflow-x: hidden;
 		overflow-y: hidden;
-		margin-left: 15%;
-		margin-bottom: 100px;
+		
+		margin-bottom: 140px;
+		margin-left: 18%;
 }
+
 #contact_tableWrapper {
-		width: 1300px;
-		height: 450px;
 		list-style: none;
+		width: 1050px;
+		height: 500px;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
 }
+
+#contact_tableWrapper > li {
+		float: left;
+		width: 450px;
+		height: 90px;
+}
+
+#contact_tableWrapper > li:nth-child(even) {
+}
+
 </style>
 </head>
 <body>
@@ -274,11 +280,9 @@ Olivia, Silvia, Adam and Laura
 </p>
 </div>
 
-<!--positioning the map and contact form-->
+<!--Map of G5G headquarters-->
 <div id="contact_table">
 <ul id="contact_tableWrapper">
-
-<!--Map of G5G headquarters-->
 <li>
 <div id="mapsingle">
  <iframe
@@ -295,7 +299,6 @@ Olivia, Silvia, Adam and Laura
 <li>
 <div id="contactform">
 <div class="row"><div class="column">
-<div id="map" style="width:100%;height:500px"></div>
 </div>
     <div class="column">
       <form action="mailto:gimme5glasgow@gmail.com" method="post" enctype="text/plain">
@@ -311,6 +314,9 @@ Olivia, Silvia, Adam and Laura
   </div>
 </div>
 </li>
+
+</ul>
+</div>
 
 <!--footer-->
 <div id="footer_container">
