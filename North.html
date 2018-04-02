@@ -200,7 +200,7 @@ a:link {
         width: 100%;
     }
 }
-/* The Modal (background) */
+/* functions for the pop up Google Map */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -240,8 +240,8 @@ a:link {
     cursor: pointer;
     font-family: "Times";
 }
-/* button style elements */
-#myBtn {
+/* Styling for the pop up Google Map */
+#googlemap {
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
@@ -260,11 +260,11 @@ right: 160px;
 	border-radius: 4px;
 	margin-top: 7px;
 	}
-#myBtn:hover {
+#googlemap:hover {
 background-color: #555;}
-
-/*end of modal */
-#myBtn1 {
+/*end of Google Map functions and styling */
+    
+#arrowup {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -283,7 +283,7 @@ background-color: #555;}
   border-radius: 4px;
 }
 
-#myBtn1:hover {
+#arrowup:hover {
   background-color: #555;
 }
 
@@ -314,8 +314,6 @@ background-color: #555;}
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
 
 <!-- MAIN IMAGE GRID(Center website) -->
 <div class="main">
@@ -325,31 +323,31 @@ background-color: #555;}
 <div class="row">
   <div class="column">
     <div class="content">
-      <a href="ADD LINK"><img src="ADD IMAGE" alt="Glue Factory" style="width:100%">
+      <a href="ADD LINK"><img src="North/Glue%20Exterior.jpg" alt="Glue Factory" style="width:100%">
       <div class="venuename"><h3>Glue Factory</h3></div></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="Whisky Bond" style="width:100%">
+    <a href="ADD LINK"><img src="North/Whisky%201.JPG" alt="Whisky Bond" style="width:100%">
       <h3>Whisky Bond</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="Civic House" style="width:100%">
+    <a href="ADD LINK"><img src="North/Civic%20Main.jpg" alt="Civic House" style="width:100%">
       <h3>Civic House</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="Queen's Cross Church" style="width:100%">
+    <a href="ADD LINK"><img src="North/Mack%201.JPG" alt="Mackintosh Church" style="width:100%">
       <h3>Queen's Cross Church</h3></a>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <a href="ADD LINK"><img src="ADD LINK" alt="The Strathmore" style="width:100%">
+    <a href="ADD LINK"><img src="North/Strath%201.JPG" alt="The Strathmore" style="width:100%">
       <h3>The Strathmore</h3></a>
     </div>
   </div>
@@ -374,11 +372,14 @@ background-color: #555;}
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<!-- Trigger/Open the Google Map -->
+<button id="googlemap">
 MAP
 </button>
 
+<!-- arrow up button-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
+    
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -455,8 +456,6 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
     </script>
-
-	</center>
   </div>
 </div>
 </div>
@@ -476,7 +475,7 @@ function closeNav() {
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("googlemap");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -497,14 +496,14 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 20px from the top of the document, show the button ARROW UP
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn1").style.display = "block";
+        document.getElementById("arrowup").style.display = "block";
     } else {
-        document.getElementById("myBtn1").style.display = "none";
+        document.getElementById("arrowup").style.display = "none";
     }
 }
 
