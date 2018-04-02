@@ -5,35 +5,38 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Gimme Five Glasgow</title>
 <style>
-
-	html {
-    background-repeat: no-repeat;
-	background-image: url("Glasgow copy.jpg");
-	}
-	
-	#openmenu {
-	position: fixed;
-	top: 5%;
-	left: 5%;
-	color: black;
-	font-size: 20px;
-	font-family: "Palatino"; "Times New Roman";
-	cursor:pointer;
-	}
-	
-	h1 {
-		margin-top: 2.25%;
-		font-size:40px;
-		font-weight: normal;
-		text-align: center;
-		font-family: "Palatino";
-	}
-	
-	p {
-	font-family: Palatino; Times New Roman;
-	}
-	
-	.sidenav {
+  
+  html {
+  background-image: url("indeximage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+  
+  #openmenu {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  color: black;
+  font-size: 20px;
+  font-family: "Palatino"; "Times New Roman";
+  cursor:pointer;
+  }
+  
+  h1 {
+    margin-top: 2.25%;
+    font-size:40px;
+    font-weight: normal;
+    text-align: center;
+    font-family: "Palatino";
+  }
+  
+  p {
+  font-family: Palatino; Times New Roman;
+  }
+  
+  .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -45,43 +48,43 @@
     transition: 0.5s;
     padding-top: 60px;
 }
-	
-	.sidenav a {
+  
+  .sidenav a {
     padding: 9px 9px 9px 32px;
     text-decoration: none;
     font-size: 20px;
-	font-family: "Palatino";
+  font-family: "Palatino";
     color: #818181;
     display: block;
     transition: 0.3s;
 }
-
-	.sidenav a:hover {
-	color: white;
-	}
-	
-	.sidenav .closebtn {
+  .sidenav a:hover {
+  color: white;
+  }
+  
+  .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-	
+  
     #districtmap {
         position: fixed;
-		width: 96%;
-		height: 65%;
-		top: 19.5%;
-		left: 2%;
+    width: 90%;
+    height: 60%;
+    top: 19.5%;
+    left: 5%;
+    margin-top: 1%;
+    margin-bottom: 50%;
     }
-	
-	 #citycentre {
+  
+  #citycentre {
   opacity: 0.5;
   }
   
@@ -125,75 +128,73 @@
         fill: #F69CFF !important;
         cursor: pointer;
     }
-	
     #info-box {
         display: none;
         position: absolute;
         top: 0px;
         left: 0px;
         z-index: 1;
-		background-color: white;
-		border: 1px solid black;
+    background-color: white;
+    border: 1px solid black;
         padding: 8px;
         font-size: 15px;
         font-family: "Palatino"
     }
-	
-	#header_container {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	background-color: none;
-	opacity: 1;
-	color: black;
-	text-align: center;
-	font-family: "Trebuchet MS"
-	}
-	
-	#footer_container {
-		position: fixed;
-		left: 0;
-		bottom: 0;
-        height: 60px;
-		width: 100%;
-		background-color: #3d3c3C;
-		padding: 20px;
-		color: white;
-		text-align: center;
-		font-family: "palatino";
-	}
-	
-	.fa {
-		padding: 13px;
-		font-size: 20px;
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		margin: 5px 10px;
-		border-radius: 50%;
-	}
-
-	.fa-facebook {
-		background: white;
-		color: #3D3C3C;
-	}
-	
-	.fa-twitter {
-		background: white;
-		color: #3D3C3C;
-	}
-	
-	.fa-pinterest {
-		background: white;
-		color: #3D3C3C;	
-	}
-	
-	.fa-instagram {
-		background: white;
-		color: #3D3C3C;
-	}
-	
+  
+  #header_container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: none;
+  opacity: 1;
+  color: black;
+  text-align: center;
+  font-family: "Trebuchet MS"
+  }
+  
+  #footer_container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #3d3c3C;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: "palatino";
+  }
+  
+  .fa {
+    padding: 13px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+  }
+  .fa-facebook {
+    background: white;
+    color: #3D3C3C;
+  }
+  
+  .fa-twitter {
+    background: white;
+    color: #3D3C3C;
+  }
+  
+  .fa-pinterest {
+    background: white;
+    color: #3D3C3C; 
+  }
+  
+  .fa-instagram {
+    background: white;
+    color: #3D3C3C;
+  }
+  
 </style>
 </head>
 <body>
@@ -337,10 +338,10 @@
 </div>
 <!--footer-->
 <div id="footer_container">
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-pinterest"></a>
-<a href="#" class="fa fa-instagram"></a>
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 </div>
 <!--svg info box function-->
 <script>
@@ -348,16 +349,13 @@ $("path, circle").hover(function(e) {
   $('#info-box').css('display','block');
   $('#info-box').html($(this).data('info'));
 });
-
 $("path, circle").mouseleave(function(e) {
   $('#info-box').css('display','none');
 });
-
 $(document).mousemove(function(e) {
   $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
   $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
 }).mouseover();
-
 var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 if(ios) {
   $('a').on('click touchend', function() { 
@@ -370,7 +368,6 @@ if(ios) {
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
