@@ -140,67 +140,8 @@
 	    margin-right: 25%;
 	    padding-top: 0;
 	}
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    font-family: "Times";
-}
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    font-family: "Times";
-    cursor: pointer;
-}
-/* button style elements */
-#myBtn {
-background-color: #3D3C3C;
-position: absolute;
-right: 160px;
-    border: none;
-	font-family:"Palatino";
-    color: white;
-    padding-top: 17px;
-	padding-left: 10px;
-	padding-bottom: 17px;
-	padding-right: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px; 
-    cursor: pointer;
-	border-radius: 4px;
-	margin-top: 7px;
-	}
-#myBtn:hover {
-background-color: #555;}
-/*end of modal */
-#myBtn1 {
+    
+#arrowup {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -218,7 +159,7 @@ background-color: #555;}
   padding-right: 17px;
   border-radius: 4px;
 }
-#myBtn1:hover {
+#arrowup:hover {
   background-color: #555;
 }
 /* Contact form style */
@@ -314,12 +255,12 @@ input[type=submit]:hover {
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
 
 <!--image grid-->
 <div class="content">
 <img src="IMG_2684.JPG" alt="Gimme Five Glasgow Team" style="width:50%">
+<!--text bit for about page-->
 <p class="paragraph">
 Gimme Five, Glasgow consists of four dedicated digital media students at University of Glasgow: Olivia, Silvia, Adam and Laura. What sparked this project was our mutual interest towards the art scene in Glasgow as well as the central Glasgow districts that all have exciting new things emerging. We all agreed that even though social media and online magazines are full of tips and "What's On"-type of content on this city, there was a real lack of websites dedicated to more curated content.
 <br>
@@ -336,9 +277,11 @@ Olivia, Silvia, Adam and Laura
 </p>
 </div>
 
+<!--positioning the map and contact form-->
 <div id="contact_table">
 <ul id="contact_tableWrapper">
 
+<!--Map of G5G headquarters-->
 <li>
 <div id="mapsingle">
  <iframe
@@ -351,6 +294,7 @@ Olivia, Silvia, Adam and Laura
 </div>
 </li>
 
+<!--Contact the team form-->
 <li>
 <div id="contactform">
 <div class="row"><div class="column">
@@ -380,7 +324,7 @@ Olivia, Silvia, Adam and Laura
 </div>
 
 <script>
-<!--side navigation bar functions-->
+// side navigation bar functions // 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
@@ -392,9 +336,9 @@ function closeNav() {
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn1").style.display = "block";
+        document.getElementById("arrowup").style.display = "block";
     } else {
-        document.getElementById("myBtn1").style.display = "none";
+        document.getElementById("arrowup").style.display = "none";
     }
 }
 // When the user clicks on the button, scroll to the top of the document
