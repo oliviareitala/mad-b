@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+	
 /*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
@@ -15,6 +16,7 @@
 		font-family: "Palatino";
 		cursor:pointer;
 	}
+	
   /*styling main heading*/
 	h1 {
 		margin-top: 1.25%;
@@ -22,6 +24,7 @@
 		font-weight: normal;
 		text-align: center;
 	}
+	
  /*styling the left side navigation bar*/
 	.sidenav {
 		height: 100%;
@@ -60,6 +63,7 @@
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 	}
+	
 /*styling heading container*/
 	#header_container {
 		left: 0;
@@ -71,6 +75,7 @@
 		text-align: center;
 		font-family: "Palatino";
 	}
+	
 /*styling footer container*/
 	#footer_container {
 		position: absolute;
@@ -84,6 +89,7 @@
 		text-align: center;
 		font-family: "palatino";
 	}
+	
 /*social media graphics*/
 	.fa {
 		padding: 13px;
@@ -113,6 +119,7 @@
 		background: white;
 		color: #3D3C3C;
 	}
+	
  /*styling text etc in body*/
 	body {
 		 position: relative;
@@ -123,6 +130,7 @@
 		 font-family: "Times";
 		 margin: 0;
 	}
+	
  /*text content styling on venue pages*/
 	.content {
 		     background-color: white;
@@ -153,7 +161,8 @@
 		   text-align: center;
 		   margin-bottom: 10%;
 	}
-	/* The Modal (background) this affects the google maps */
+	
+/* The Modal (background) this affects the google maps */
 .modal {
     display: none; 
     position: fixed; 
@@ -167,6 +176,7 @@
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 }
+	
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -176,6 +186,7 @@
     width: 80%;
     font-family: "Times";
 }
+	
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -190,6 +201,7 @@
     font-family: "Times";
     cursor: pointer;
 }
+	
 /* Styling for the pop up Google Map */
 #googlemap {
 background-color: #3D3C3C;
@@ -213,6 +225,7 @@ right: 160px;
 #googlemap:hover {
 background-color: #555;}
 /*end of Google Map button styling*/
+	
 /*Pull up button that takes you to the top of the page*/
 #arrowup {
   display: none;
@@ -239,11 +252,13 @@ background-color: #555;}
 	height: 400px;
 	width: 100px;
 	}
+	
 /*making source + image credits smaller and centered*/
 .sources {
 	      font-size: 13px;
 	      text-align: center;
 }
+	
 </style>
 </head>
 <body>
@@ -268,9 +283,6 @@ background-color: #555;}
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<!--arrow up button-->
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
 
 <!--image grid-->
 <div class="content">
@@ -299,6 +311,7 @@ Image Credits: Laura Thomson & <a href="https://www.youtube.com/watch?v=OcaNzYnx
 </p>
 </div>
 </div>
+	
 <!--footer-->
 <div id="footer_container">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
@@ -307,9 +320,12 @@ Image Credits: Laura Thomson & <a href="https://www.youtube.com/watch?v=OcaNzYnx
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<button id="googlemap">
 MAP
 </button>
+	
+<!--arrow up button-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>	
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -338,6 +354,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 // end of side nav bar functions
+	
 // Get the modal
 var modal = document.getElementById('myModal');
 	
@@ -351,6 +368,7 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
     modal.style.display = "block";
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -361,6 +379,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -375,6 +394,7 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+	
 </script>
 </body>
 </html>
