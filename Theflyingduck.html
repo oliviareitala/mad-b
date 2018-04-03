@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+	
   /*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
@@ -15,6 +16,7 @@
 		font-family: "Palatino";
 		cursor:pointer;
 	}
+	
 /*styling main heading*/
 	h1 {
 		margin-top: 1.25%;
@@ -22,6 +24,7 @@
 		font-weight: normal;
 		text-align: center;
 	}
+	
  /*styling the left side navigation bar*/
 	.sidenav {
 		height: 100%;
@@ -60,6 +63,7 @@
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 	}
+	
  /*styling heading container*/
 	#header_container {
 		left: 0;
@@ -71,6 +75,7 @@
 		text-align: center;
 		font-family: "Palatino";
 	}
+	
 /*styling footer container*/
 	#footer_container {
 		position: absolute;
@@ -114,6 +119,7 @@
 		background: white;
 		color: #3D3C3C;
 	}
+	
 	/*styling text etc in body*/
 	body {
 		 position: relative;
@@ -125,6 +131,7 @@
 		 margin: 0;
 		 overflow-x: hidden;
 	}
+	
  /*text content styling on venue pages*/
 	.content {
 		     background-color: white;
@@ -155,6 +162,7 @@
 		   text-align: center;
 		   margin-bottom: 10%;
 	}
+	
 /* The Modal (background) this affects the google maps */
 .modal {
     display: none; 
@@ -169,6 +177,7 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+	
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -178,6 +187,7 @@
     width: 80%;
     font-family: "Times";
 }
+	
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -192,6 +202,7 @@
     font-family: "Times";
     cursor: pointer;
 }
+	
 /* Styling for the pop up Google Map */
 #googlemap {
 background-color: #3D3C3C;
@@ -215,6 +226,8 @@ right: 160px;
 #googlemap:hover {
 background-color: #555;}
 /*end of Google Map button styling */
+	
+/*Pull up button that takes you to the top of the page*/
 #arrowup {
   display: none;
   position: fixed;
@@ -240,6 +253,7 @@ background-color: #555;}
 	height: 400px;
 	width: 100%;
 	}
+	
 /*making source + image credits smaller and centered*/
 .sources {
 	      font-size: 13px;
@@ -248,10 +262,12 @@ background-color: #555;}
 </style>
 </head>
 <body>
+	
 <!--header-->
 <div id="header_container">
 <h1>The Flying Duck</h1>
 </div>
+	
 <!--side navigation divider-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -264,11 +280,10 @@ background-color: #555;}
   <a href="aboutpage.html">ABOUT</a>
   <a href="references.html">REFERENCES</a>
 </div>
+	
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-<!-- arrow up button -->
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
+
 <!--image grid-->
 <div class="content">
 <div id="image">
@@ -298,18 +313,25 @@ Image Credits: Laura Thomson
 </p>
 </div>
 </div>
+	
 <!--footer-->
 <div id="footer_container">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+	
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<button id="googlemap">
 MAP
 </button>
+	
+<!-- arrow up button -->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>	
+	
 <!-- The Modal -->
 <div id="myModal" class="modal">
+	
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -327,6 +349,7 @@ MAP
 </div>
 </div>
 <script>
+	
 // side navigation bar functions
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -335,20 +358,26 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 // end of side nav bar functions
+	
 // Get the modal
 var modal = document.getElementById('myModal');
+	
 // Get the button that opens the modal
 var btn = document.getElementById("googlemap");
+	
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+	
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
