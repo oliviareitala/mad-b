@@ -104,15 +104,17 @@
 	}
 	
 	/*social media graphics*/
-	.fa {
-		padding: 13px;
-		font-size: 20px;
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		margin: 5px 10px;
-		border-radius: 50%;
-	}
+	 .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+	margin-bottom: 10px;
+  }
+	
 	.fa-facebook {
 		background: white;
 		color: #3D3C3C;
@@ -158,7 +160,7 @@
 	    margin-right: 25%;
 	    padding-top: 0;
 	}
-    
+/*Pull up button that takes you to the top of the page*/    
 #arrowup {
   display: none;
   position: fixed;
@@ -180,6 +182,7 @@
 #arrowup:hover {
   background-color: #555;
 }
+	
 /* Contact form style */
 input[type=text], select, textarea {
     width: 100%;
@@ -214,6 +217,35 @@ input[type=submit]:hover {
     display: table;
     clear: both;
 }
+	
+/*three links in the footer*/
+#staticinfo {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+    
+#staticinfo a {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+
+#staticinfo a:hover {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: white;
+text-decoration: none;
+}
+
+
+/*copyright info in the footer*/
+.copyright {font-size: 11px;
+	   color: #818181;
+            }
+	
 </style>
 </head>
 <body>
@@ -237,7 +269,6 @@ input[type=submit]:hover {
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
 
 <!--image grid-->
 <div class="content">
@@ -279,10 +310,25 @@ Olivia, Silvia, Adam and Laura
 
 <!--footer-->
 <div id="footer_container">
+
+<!--arrow up button-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>	
+
+<!--this divider are the three bits that stay on the left side of the screen-->
+<div id="staticinfo">
+<a href="index.html">Home</a>
+<br>
+<a href="aboutpage.html">About</a>
+<br>
+<a href="references.html">References</a>
+</div>	
+	
+<!--social media icons-->	
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
 </div>
 
 <script>
