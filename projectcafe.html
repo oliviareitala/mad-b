@@ -93,14 +93,15 @@
 	
 /*social media graphics*/
 	.fa {
-		padding: 13px;
-		font-size: 20px;
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		margin: 5px 10px;
-		border-radius: 50%;
-	}
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+	margin-bottom: 10px;
+  }
 	.fa-facebook {
 		background: white;
 		color: #3D3C3C;
@@ -257,7 +258,30 @@ background-color: #555;}
 	      font-size: 13px;
 	      text-align: center;
 }
-	
+	/*three links in the footer*/
+#staticinfo {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+    
+#staticinfo a {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+#staticinfo a:hover {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: white;
+text-decoration: none;
+}
+/*copyright info in the footer*/
+.copyright {font-size: 11px;
+	   color: #818181;
+            }
 </style>
 </head>
 <body>
@@ -290,7 +314,7 @@ background-color: #555;}
  <p class="paragraph"> Since opening its doors in 2014, the Project Cafe has successfully managed to create and maintain a sense of community to the People of Glasgow. Over the years this community has flourished, and the cafe currently acts as a platform for social exchange, in addition to providing customers with an extensive and nourishing food menu in the towns city centre. If you ever find yourself on the infamous Sauchiehall Street, then why not pop in to experience their Instagram famous flat whites and their famous all vegetarian menu which is very popular <a href="https://food.list.co.uk/place/60892-the-project-cafe-glasgow/"> (3) </a> . This is probably because Glasgow was named the most vegan/vegetarian friendly city in Britain by The Guardian in 2013<a href="https://www.theguardian.com/lifeandstyle/shortcuts/2013/aug/12/glasgow-vegan-capital-of-britain">(1)</a>.  Therefore, it is not surprise that The Project Cafes menu has been a large success. However, the menu is undeniably great and even you non-vegans out there should come try some of their tasty treats.
 </p>
  <img src="City centre/projectcafe.jpg" alt="Inside project cafe" style="width: 50%" class="img2">
-<p class="paragraph">Deceivingly the cafe is also home to the Tell It Slant bookshop which has intriguing range of Scottish poetry books on offer and Is located at the back of the cafe. In addition to this the cafe further builds of this sense of community that they advertise, by hosting independent poetry events and exhibitions for local aspiring artists <a href="http://theprojectcafe.weebly.com/ "> (2) </a>. However, if you prefer to feel the sun on your face,or in Glasgows case, the rain. Then the cafe also has an outdoor balcony where you can sit and enjoy your delicious treats or read your new book. 
+<p class="paragraph">Deceivingly the cafe is also home to the Tell It Slant bookshop which has intriguing range of Scottish poetry books on offer and Is located at the back of the cafe. In addition to this the cafe further builds of this sense of community that they advertise, by hosting independent poetry events and exhibitions for local aspiring artists <a href="http://theprojectcafe.weebly.com/ ">(2)</a>. However, if you prefer to feel the sun on your face,or in Glasgows case, the rain. Then the cafe also has an outdoor balcony where you can sit and enjoy your delicious treats or read your new book. 
 <br>
  <br>
  <b>G5G recommends</b>:
@@ -310,13 +334,8 @@ Image Credits: Laura Thomson & Nini Huang
 </p>
 </div>
 </div>
-	
 <!--footer-->
 <div id="footer_container">
-<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
-<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
-<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
-<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 
 <!-- Trigger/Open The Modal -->
 <button id="googlemap">
@@ -324,7 +343,25 @@ MAP
 </button>
 	
 <!--arrow up button-->
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>	
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>  
+
+
+<!--this divider are the three bits that stay on the left side of the screen-->
+<div id="staticinfo">
+<a href="index.html">Home</a>
+<br>
+<a href="aboutpage.html">About</a>
+<br>
+<a href="references.html">References</a>
+</div>
+
+
+<!--social media icons-->
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
