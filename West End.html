@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
 <style>
-
 	#openmenu {
 		position: fixed;
 		top: 5%;
@@ -46,7 +45,6 @@
 		display: block;
 		transition: 0.3s;
 	}
-
 	.sidenav a:hover {
 		color: white;
 	}
@@ -58,12 +56,10 @@
 		font-size: 36px;
 		margin-left: 50px;
 	}
-
 @media screen and (max-height: 450px) {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 	}
-
 	#header_container {
 		left: 0;
 		top: 0;
@@ -74,7 +70,6 @@
 		text-align: center;
 		font-family: 'Antic Slab'; 'sans-serif';
 	}
-
 	#footer_container {
 		position: absolute;
 		left: 0;
@@ -98,7 +93,6 @@
     border-radius: 50%;
 	margin-bottom: 10px;
   }
-
 	.fa-facebook {
 		background: white;
 		color: #3D3C3C;
@@ -118,18 +112,15 @@
 		background: white;
 		color: #3D3C3C;
 	}
-
 	img {
 		width: 25%;
 		height: 40%;
 		padding: 1%;
 	}
-
 /* GRID CSS */
 {
     box-sizing: border-box;
 }
-
 body {
     position: relative;
     min-height: 100vh;
@@ -139,42 +130,35 @@ body {
     margin: 0;
 overflow-x: hidden;
 }
-
 /* Center website */
 .main {
 	margin-left: 10%;
 }
-
 .row {
     float:center;
 }
-
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
     padding: 8px;
 }
-
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
     width: 40%;
 }
-
 /* Clear floats after rows */ 
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Content */
 .content {
  background-color: white;
  padding: 10px;
  text-align: center;
 }
-
 #table {min-width: 1000px;
        margin-left: 5%;
        padding-bottom: 15px;}
@@ -184,7 +168,6 @@ overflow-x: hidden;
 h3 {
    color: black;
 }
-
 a:link {
         text-decoration: none;
 }
@@ -195,7 +178,6 @@ a:link {
         width: 50%;
     }
 }
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
     .column {
@@ -216,7 +198,6 @@ a:link {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -226,7 +207,6 @@ a:link {
     width: 80%;
     font-family: 'Antic Slab'; 'sans-serif';
 }
-
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -234,7 +214,6 @@ a:link {
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: #000;
@@ -243,7 +222,7 @@ a:link {
     font-family: 'Antic Slab'; 'sans-serif';
 }
 /* button style elements */
-#myBtn {
+#googlemap {
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
@@ -262,11 +241,10 @@ right: 160px;
 	border-radius: 4px;
 	margin-top: 7px;
 	}
-#myBtn:hover {
+#google:hover {
 background-color: #555;}
-
 /*end of modal */
-#myBtn1 {
+#arrowup {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -284,16 +262,13 @@ background-color: #555;}
   padding-right: 17px;
   border-radius: 4px;
 }
-
-#myBtn1:hover {
+#arrowup:hover {
   background-color: #555;
 }
-
 #map {
         height: 400px;
         width: 100%;
        }
-
 /*three links in the footer*/
 #staticinfo {
 float: left;
@@ -308,15 +283,12 @@ font-family: 'Antic Slab'; 'sans-serif';
 color: #818181;
 text-decoration: none;
 }
-
 #staticinfo a:hover {
 float: left;
 font-family: 'Antic Slab'; 'sans-serif';
 color: white;
 text-decoration: none;
 }
-
-
 /*copyright info in the footer*/
 .copyright {font-size: 11px;
 	   color: #818181;
@@ -400,12 +372,21 @@ text-decoration: none;
 <div id="footer_container">
 	
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">
+<button id="googlemap">
 MAP
 </button>
 	
 <!--arrow up button-->
 <button onclick="topFunction()" id="arrowup" title="Go to top">^</button> 	
+
+<!--this divider are the three bits that stay on the left side of the screen-->
+<div id="staticinfo">
+<a href="index.html">Home</a>
+<br>
+<a href="aboutpage.html">About</a>
+<br>
+<a href="references.html">References</a>
+</div>
 	
 <!--social media icons-->	
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
@@ -430,13 +411,11 @@ function initMap() {
 		lat: 55.8728054,
 		long: -4.281955000000039
 	};
-
 	var swg3 = {
 		info: '<a href="https://www.google.co.uk/maps/place/SWG3+Studio+Warehouse/@55.864523,-4.3018737,17z/data=!3m1!4b1!4m5!3m4!1s0x488845d835515a49:0x49a638f09124556d!8m2!3d55.864523!4d-4.299685"><strong>SWG3 Studio Warehouse</strong><br>100 Eastvale Pl<br> Glasgow, G3 8QG<br>\</a>',
 		lat: 55.864523,
 		long: -4.299684999999954
 	};
-
 	var fika = {
 		info: '<a href="https://www.google.co.uk/maps/place/For+Fika+Sake/@55.8704173,-4.3045786,17z/data=!3m1!4b1!4m5!3m4!1s0x488845db142b40e7:0xecd28a8851ca1831!8m2!3d55.8704173!4d-4.3023899"><strong>For Fika Sake</strong><br>7 Keith St<br> Glasgow, G11 6QQ<br>\</a>',
 		lat: 55.8704173,
@@ -454,7 +433,6 @@ function initMap() {
 		lat: 55.86648,
 		long: -4.290063700000019
 	};
-
 	var locations = [
       [tchai.info, tchai.lat, tchai.long, 0],
       [swg3.info, swg3.lat, swg3.long, 1],
@@ -462,23 +440,18 @@ function initMap() {
 	  [dukes.info, dukes.lat, dukes.long, 3],
 	  [society.info, society.lat, society.long, 4],
     ];
-
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 14,
 		center: new google.maps.LatLng(55.8708895,-4.2950304),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
-
 	var infowindow = new google.maps.InfoWindow({});
-
 	var marker, i;
-
 	for (i = 0; i < locations.length; i++) {
 		marker = new google.maps.Marker({
 			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 			map: map
 		});
-
 		google.maps.event.addListener(marker, 'click', (function (marker, i) {
 			return function () {
 				infowindow.setContent(locations[i][0]);
@@ -499,34 +472,27 @@ function initMap() {
 </div>
 </div>
 <script>
-
 <!--side navigation bar functions-->
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 // Get the modal
 var modal = document.getElementById('myModal');
-
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
+var btn = document.getElementById("googlemap");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -535,30 +501,18 @@ window.onclick = function(event) {
 }
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn1").style.display = "block";
+        document.getElementById("arrowup").style.display = "block";
     } else {
-        document.getElementById("myBtn1").style.display = "none";
+        document.getElementById("arrowup").style.display = "none";
     }
 }
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
