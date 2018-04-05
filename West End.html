@@ -88,15 +88,16 @@
 		font-family: 'Antic Slab'; 'sans-serif';
 	}
 	
-	.fa {
-		padding: 13px;
-		font-size: 20px;
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		margin: 5px 10px;
-		border-radius: 50%;
-		}
+	 .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+	margin-bottom: 10px;
+  }
 
 	.fa-facebook {
 		background: white;
@@ -293,6 +294,34 @@ background-color: #555;}
         width: 100%;
        }
 
+/*three links in the footer*/
+#staticinfo {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+    
+#staticinfo a {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+
+#staticinfo a:hover {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: white;
+text-decoration: none;
+}
+
+
+/*copyright info in the footer*/
+.copyright {font-size: 11px;
+	   color: #818181;
+            }	
+	
 </style>
 </head>
 <body>
@@ -316,9 +345,6 @@ background-color: #555;}
 
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
-</div>
-
-<button onclick="topFunction()" id="myBtn1" title="Go to top">^</button>
 
 <!-- MAIN IMAGE GRID(Center website) -->
 <div class="main">
@@ -372,15 +398,21 @@ background-color: #555;}
 
 <!--footer-->
 <div id="footer_container">
-<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
-<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
-<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
-<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
-
+	
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">
 MAP
 </button>
+	
+<!--arrow up button-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button> 	
+	
+<!--social media icons-->	
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
+<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
