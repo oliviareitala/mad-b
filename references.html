@@ -6,34 +6,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
 <style>
+/*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
 		top: 5%;
 		left: 5%;
 		color: black;
 		font-size:20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 		cursor:pointer;
 	}
 	
 	li {
 		list-style: none;
 	}
+	/*styling main heading*/
 	
 	h1 {
 		margin-top: 1.25%;
 		font-size:40px;
 		font-weight: normal;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
 	
 	h3 {
 		font-size:20px;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
-	
+	 /*styling the left side navigation bar*/
 	.sidenav {
 		height: 100%;
 		width: 0;
@@ -46,16 +48,17 @@
 		transition: 0.5s;
 		padding-top: 60px;
 }
-	
+	 /*styling the left side navigation bar*/
 	.sidenav a {
 		padding: 9px 9px 9px 32px;
 		text-decoration: none;
 		font-size: 20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 		color: #818181;
 		display: block;
 		transition: 0.3s;
 	}
+	
 	.sidenav a:hover {
 		color: white;
 	}
@@ -71,6 +74,7 @@
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 	}
+	/*styling heading container*/
 	#header_container {
 		left: 0;
 		top: 0;
@@ -79,9 +83,9 @@
 		opacity: 1;
 		color: black;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
-	
+	/*styling footer container*/
 	#footer_container {
 		position: absolute;
 		left: 0;
@@ -92,34 +96,35 @@
 		padding: 20px;
 		color: white;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 		float: bottom;
 	}
-
+/*three links in the footer*/
 #staticinfo {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: #818181;
 text-decoration: none;
 }
     
 #staticinfo a {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: #818181;
 text-decoration: none;
 }
 #staticinfo a:hover {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: white;
 text-decoration: none;
 }
-#socialmedia {
-    margin-left: 41%;
-    }
-
-
+/*social media graphics*/
+	 #socialmedia {
+        position: relative;
+        margin-right: 6%;
+		margin-left: 6%
+}	
 	.fa {
 		padding: 10px;
 		font-size: 20px;
@@ -149,17 +154,18 @@ text-decoration: none;
 		background: white;
 		color: #3D3C3C;
 	}
-	
+	/*styling text etc in body*/
 	body {
 		 position: relative;
 		 min-height: 100vh;
 		 background-color: white;
 		 padding-bottom: 60%;
          padding: 20px;
-		 font-family: 'Antic Slab'; 'sans-serif';
+		 font-family: 'Antic Slab'; 'Helvetica';
 		 margin: 0;
 		 overflow-x: hidden;
 	}
+	/*text content styling on venue pages*/
 	.content {
 		     background-color: white;
 		     text-align: center;
@@ -172,7 +178,7 @@ text-decoration: none;
 	    margin-right: 25%;
 	    padding-top: 0;
 	}
-    
+   /*Pull up button that takes you to the top of the page*/ 
 #arrowup {
   display: none;
   position: fixed;
@@ -194,40 +200,7 @@ text-decoration: none;
 #arrowup:hover {
   background-color: #555;
 }
-/* Contact form style */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #818181;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: vertical;
-	font-family: 'Antic Slab'; 'sans-serif';
-}
-input[type=submit] {
-    background-color: #818181;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-}
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-/* Create two columns that float next to eachother */
-.column {
-    float: center;
-    padding: 20px;
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-bottom: 100px;
-}
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 
 .bibliography {
 	           margin-left: 20%;
@@ -235,10 +208,13 @@ input[type=submit]:hover {
 	           text-align: justify;
 }
 
+/*copyright info in the footer*/
 .copyright {font-size: 11px;
 	   color: #818181;
+    position: relative;
+    margin-right: 6%;
+	margin-left: 6%;
             }
-
 </style>
 </head>
 <body>
@@ -416,11 +392,13 @@ calling_Clash_fans_everywhere/ [Accessed 4 Apr. 2018]. </li> <br>
 </div>
 
 <!--social media icons-->
+<div id="socialmedia">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook"></a>
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a><br>
-<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
+</div>
+<div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
 </div>
 
 <script>
