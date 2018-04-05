@@ -1,13 +1,12 @@
 <!DOCTYPE>
 <html>
 <head>
-<title>Kinning Park Complex</title>
+<title>Southside</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
 <style>
 
-    /*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
 		top: 5%;
@@ -18,7 +17,6 @@
 		cursor:pointer;
 	}
 	
-    /*styling main heading*/
 	h1 {
 		margin-top: 1.25%;
 		font-size:40px;
@@ -26,7 +24,6 @@
 		text-align: center;
 	}
 	
-    /*styling the left side navigation bar*/
 	.sidenav {
 		height: 100%;
 		width: 0;
@@ -34,7 +31,7 @@
 		z-index: 1;
 		top: 0;
 		left: 0;
-		background-color: #3D3C3C;
+		background-color: #3d3c3c;
 		overflow-x: hidden;
 		transition: 0.5s;
 		padding-top: 60px;
@@ -67,7 +64,6 @@
 	.sidenav a {font-size: 18px;}
 	}
 
-    /*styling heading container*/
 	#header_container {
 		left: 0;
 		top: 0;
@@ -79,12 +75,11 @@
 		font-family: 'Antic Slab'; 'sans-serif';
 	}
 
-	/*styling footer container*/
 	#footer_container {
 		position: absolute;
 		left: 0;
-		bottom: 0;
-        height: 60px;
+		bottom: 0px;
+    height: 60px;
 		width: 100%;
 		background-color: #3d3c3C;
 		padding: 20px;
@@ -93,24 +88,19 @@
 		font-family: 'Antic Slab'; 'sans-serif';
 	}
 	
-
-     /*social media graphics*/	
-	
-	#socialmedia {
-position: relative;
-	margin-right: 6%;
+	.fa:hover {
+		fill: red !important;
 	}
-
-	 .fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 10px;
-    border-radius: 50%;
-	margin-bottom: 10px;
-  }
+	
+	.fa {
+		padding: 13px;
+		font-size: 20px;
+		width: 20px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 10px;
+		border-radius: 50%;
+		}
 
 	.fa-facebook {
 		background: white;
@@ -132,94 +122,100 @@ position: relative;
 		color: #3D3C3C;
 	}
 
-	/*three links in the footer*/
-#staticinfo {
-float: left;
-font-family: 'Antic Slab'; 'sans-serif';
-color: #818181;
-text-decoration: none;
-}
-    
-#staticinfo a {
-float: left;
-font-family: 'Antic Slab'; 'sans-serif';
-color: #818181;
-text-decoration: none;
+	img {
+		width: 25%;
+		height: 40%;
+		padding: 1%;
+	}
+
+<!-- GRID CSS -->
+* {
+    box-sizing: border-box;
 }
 
-#staticinfo a:hover {
-float: left;
-font-family: 'Antic Slab'; 'sans-serif';
-color: white;
-text-decoration: none;
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    padding: 20px;
+    font-family: 'Antic Slab'; 'sans-serif';
+    margin: 0;
+    overflow-x: hidden;
 }
 
+/* Center website */
+.main {
+	margin-left: 10%;
+}
 
-/*copyright info in the footer*/
-.copyright {font-size: 11px;
-	   color: #818181;
-            }
-	
-     /*styling text etc in body*/
-	body {
-		 position: relative;
-		 min-height: 100vh;
-		 background-color: white;
-		 padding-bottom: 60%;
-         padding: 20px;
-		 font-family: 'Antic Slab'; 'sans-serif';
-		 margin: 0;
-		 overflow-x: hidden;
-	}
+.row {
+    float: center;
+}
 
-    /*text content styling on venue pages*/
-	.content {
-		     background-color: white;
-		     text-align: center;
-		     margin-top: 5%;
-		     margin-bottom: 0;
-	}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
 
-	.content a {
-			text-decoration: underline;
-			color: black;
-	}
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 40%;
+}
 
-	.content a:hover {
-			color: Thistle;
-	}
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-	.content a:visited {
-	color: black;
-	}
-	
-	.paragraph {
-		text-align: justify;
-	    margin-left: 25%;
-	    margin-right: 25%;
-	    padding-top: 0;
-	}
+/* Content */
+.content {
+ background-color: white;
+ padding: 10px;
+ text-align: center;
+}
 
-	#image {
-		   margin-top: 0%;
-		   text-align: center;
-		   margin-bottom: 10%;
-	}
+#table {min-width: 1000px;
+       margin-left: 5%;
+       padding-bottom: 15px;}
 
+h3 {
+   color: black;
+}
 
-	/* The Modal (background) this affects the google maps */
+a:link {
+        text-decoration: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+/* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -247,8 +243,7 @@ text-decoration: none;
     cursor: pointer;
     font-family: 'Antic Slab'; 'sans-serif';
 }
-
-/* Styling for the pop up Google Map */
+/* Google map button style elements */
 #googlemap {
 background-color: #3D3C3C;
 position: absolute;
@@ -268,12 +263,11 @@ right: 160px;
 	border-radius: 4px;
 	margin-top: 7px;
 	}
-
 #googlemap:hover {
 background-color: #555;}
-/*end of Google Map button styling*/
+/*end of google map styling*/
 
-/*Pull up button that takes you to the top of the page*/
+/*pull up back to top of page button*/
 #arrowup {
   display: none;
   position: fixed;
@@ -292,28 +286,23 @@ background-color: #555;}
   padding-right: 17px;
   border-radius: 4px;
 }
+
 #arrowup:hover {
   background-color: #555;
 }
+
 #map {
         height: 400px;
         width: 100%;
        }
-    
-     /*making source + image credits smaller and centered*/
 
-.sources {
-	      font-size: 13px;
-	      text-align: center;
-}
-    
 </style>
 </head>
 <body>
 
 <!--header-->
 <div id="header_container">
-<h1>KINNING PARK COMPLEX</h1>
+<h1>SOUTH SIDE</h1>
 </div>
 
 <!--side navigation divider-->
@@ -321,9 +310,8 @@ background-color: #555;}
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">HOME</a>
   <a href="citycentre.html">CITY CENTRE</a>
-  <a href="North.html">NORTH</a>
+  <a href="North.html">NORTH END</a>
   <a href="East End.html">EAST END</a>
-  <a href="Southside.html">SOUTH SIDE</a>
   <a href="West End.html">WEST END</a>
   <a href="aboutpage.html">ABOUT</a>
   <a href="references.html">REFERENCES</a>
@@ -332,49 +320,55 @@ background-color: #555;}
 <!--open menu button-->
 <div id="openmenu"><span onclick="openNav()">&#9776; MENU</span></div>
 
-<!--image grid-->
-<div class="content">
- <img src="websouthside/KPC_1.jpg" alt="Kinning Park Complex" style="width:50%">
- <p class="paragraph">Kinning Park Complex is an independent community centre just off the Kinning Park Subway station.
- It is run by locals since 1996 and also develops community art projects around the area. Their objectives for 2016/2017 state that
- they want to "Improve the building and secure future use", "Support staff to make KPC a great place to work, play and create",
- "Increase community engagement with the KPC", "Deliver more activity" and "Generate more revenue". <a href="http://www.kinningparkcomplex.org/about-us/">(3)</a>
-<br>
-<br>
- One of Kinning Park Complex' current projects is the <a href="http://www.kinningparkcomplex.org/waste-not-want/">Waste Not Want</a> initiative, which aims to make KPC a zero waste building.
-How they pursue this target is for instance through the KPCafe which serves and prepares dishes with surplus food from chains such as Tesco and
-Marks & Spencer. They also organise eco-friendly workshops that for example teach skills in "up-cycling" (<a href="https://en.oxforddictionaries.com/definition/upcycle">reusing old materials in innovative
-ways to create enhanced new products</a>) and other crafts. <a href="http://www.kinningparkcomplex.org/waste-not-want/">(1)</a></p>
-<div id="image">
- <img src="websouthside/KPC_2.jpg" alt="Kinning Park Complex" style="width: 50%">
-<p class="paragraph">To achieve these goals, KPC supports new projects and engages with the local community in order to enable the vibrant nature of
-the complex and its community. The spaces are used for various purposes from sport and dance to theatre, film, conferences and family events.
-<br>
-<br>
-<b>G5G recommends:</b>
-<br>
-<a href="http://www.kinningparkcomplex.org/events-4/">Thursday Takeover with Food Not Bombs</a> (April 28th, 16:00, evening dedicated to reducing food waste
-including pay-as-you-want meals, music and raffle)
-<br>
-<a href="http://www.kinningparkcomplex.org/events-4/">Rise & Shine Spring Retreat</a> (April 28th, 09:00, event dedicated to deep relaxation and
-meditation with lunch from Yoga Kitchen)</p>
-<img src="websouthside/KPC_3.jpg" alt="Kinning Park Complex" style="width: 50%" class="image">
-<p class="Sources">
-    Bibliography:
-<a href="http://www.kinningparkcomplex.org/waste-not-want/">1</a>,
-<a href="https://en.oxforddictionaries.com/definition/upcycle">2</a>,
-<a href="http://www.kinningparkcomplex.org/about-us/">3</a>,
-<a href="http://www.kinningparkcomplex.org/events-4/">4</a>,
-<a href="http://www.yogakitchen.co.uk/">5</a>,
-<a href="http://www.kinningparkcomplex.org/events-4/">6</a>
-<br>
-Image credit: <a href="http://www.kinningparkcomplex.org/">kinningparkcomplex.org</a> with permission
-<br>
-<br>
-<a href="Southside.html">Back</a>
-</p>
+<!-- MAIN IMAGE GRID(Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div id="table">
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <a href="Tramway.html"><img src="websouthside/Tramway2.jpg" alt="Tramway" style="width:100%">
+      <h3>Tramway</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="The Glad Cafe.html"><img src="websouthside/The-Glad-Cafe_2.jpg" alt="The Glad Cafe" style="width:100%">
+      <h3>The Glad Cafe</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="Rumshack.html"><img src="websouthside/Rumshack_3.jpg" alt="Rumshack" style="width:100%">
+      <h3>Rumshack</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="Kinning Park Complex.html"><img src="websouthside/KPC_1.jpg" alt="Kinning Park Complex" style="width:100%">
+      <h3>Kinning Park Complex</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="The Hidden Gardens.html"><img src="websouthside/The-Hidden-Gardens_2.jpg" alt="The Hidden Gardens" style="width:100%">
+      <h3>The Hidden Gardens</h3></a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <a href="Index.html"><img src="kelvingrove.jpg" alt="Homepage" style="width:100%">
+      <h3>Homepage </h3></a>
+    </div>
+  </div>
 </div>
+
+<!-- END GRID -->
 </div>
+<br>
+<br>
+<br>
 
 <!--footer-->
 <div id="footer_container">
@@ -383,11 +377,12 @@ Image credit: <a href="http://www.kinningparkcomplex.org/">kinningparkcomplex.or
 <button id="googlemap">
 MAP
 </button>
-
+	
 <!--arrow up button-->
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>    
-    
-	<!--this divider are the three bits that stay on the left side of the screen-->
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>  
+
+
+<!--this divider are the three bits that stay on the left side of the screen-->
 <div id="staticinfo">
 <a href="index.html">Home</a>
 <br>
@@ -396,37 +391,99 @@ MAP
 <a href="references.html">References</a>
 </div>
 
+
 <!--social media icons-->
 <div id="socialmedia">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
-</div>
+    </div>
 <div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
-	
+
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
- <iframe
-  width="100%"
-  height="400px"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk5ufVdBGqDB98BoKzNGmninhZbMBDj1A
-    &q=Kinning+Park+Complex" allowfullscreen>
-</iframe>
-	
+<script>
+function initMap() {
+  
+  var tram = {
+    info: '<a href="https://www.google.co.uk/maps/place/Tramway/@55.841043,-4.269553,17z/data=!3m1!4b1!4m5!3m4!1s0x4888468cd9144767:0xd8d22ddec32f9a6f!8m2!3d55.841043!4d-4.2673643"><strong>Tramway</strong><br>25 Albert Dr <br> Glasgow, G41 2PE<br>\</a>',
+    lat: 55.841043,
+    long: -4.267364300000054,
+  };
+
+  var glad = {
+    info: '<a href="https://www.google.co.uk/maps/place/The+Glad+Cafe+C.I.C/@55.8320423,-4.2804385,17z/data=!3m1!4b1!4m5!3m4!1s0x4888465894a71791:0x9c5814c7e7019f38!8m2!3d55.8320423!4d-4.2782498"><strong>The Glad Cafe</strong><br>1006A Pollokshaws Rd <br> Glasgow, G41 2HG<br>\</a>',
+    lat: 55.8320423,
+    long: -4.278249800000026,
+  };
+
+  var kinning = {
+    info: '<a href="https://www.google.co.uk/maps/place/Kinning+Park+Complex/@55.8507644,-4.2893053,17z/data=!3m1!4b1!4m5!3m4!1s0x4888467b51457665:0xc2933b65aee7e0b8!8m2!3d55.8507644!4d-4.2871166"><strong>Kinning Park Complex</strong><br>43 Cornwall St <br> Glasgow, G41 1BA<br>\</a>',
+    lat: 55.8507644,
+    long: -4.28711659999999,
+  };
+  
+  var rum = {
+    info: '<a href="https://www.google.co.uk/maps/place/The+Rum+Shack/@55.8366838,-4.2716818,17z/data=!3m1!4b1!4m5!3m4!1s0x488846f380da3125:0xdeb1a80814de4758!8m2!3d55.8366838!4d-4.2694931"><strong>The Rum Shack</strong><br>657 - 659 Pollokshaws Rd <br> Glasgow, G41 2AB<br>\</a>',
+    lat: 55.8366785,
+    long: -4.2694797000000335,
+  };
+  
+  var garden = {
+    info: '<a href="https://www.google.co.uk/maps/place/The+Hidden+Gardens/@55.8366838,-4.2716818,17z/data=!4m5!3m4!1s0x4888468cd9144767:0xc8355f1757956aac!8m2!3d55.840176!4d-4.2674449"><strong>The Hidden Gardens</strong><br>25A Albert Dr <br> Glasgow, G41 2PE<br>\</a>',
+    lat: 55.840176,
+    long: -4.267444899999987,
+  };
+
+  var locations = [
+      [tram.info, tram.lat, tram.long, 0],
+      [glad.info, glad.lat, glad.long, 1],
+      [kinning.info, kinning.lat, kinning.long, 2],
+    [rum.info, rum.lat, rum.long, 3],
+    [garden.info, garden.lat, garden.long, 4],
+    ];
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: new google.maps.LatLng(55.84634814283988,-4.278805960235559),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var infowindow = new google.maps.InfoWindow({});
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+}
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
+    </script>
   </div>
-</div>
-</div>
 </div>
 </div>
 <script>
 
-// side navigation bar functions
+<!--side navigation bar functions-->
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
@@ -434,8 +491,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-// end of side nav bar functions
-    
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -478,6 +533,14 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
