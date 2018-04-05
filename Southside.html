@@ -88,20 +88,23 @@
 		font-family: 'Antic Slab'; 'sans-serif';
 	}
 	
-	.fa:hover {
-		fill: red !important;
-	}
-	
-	.fa {
-		padding: 13px;
-		font-size: 20px;
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		margin: 5px 10px;
-		border-radius: 50%;
-		}
 
+    /*social media graphics*/	
+
+    #socialmedia {
+        position: relative;
+        margin-right: 6%;
+}	
+	 .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+	margin-bottom: 10px;
+  }
 	.fa-facebook {
 		background: white;
 		color: #3D3C3C;
@@ -296,6 +299,36 @@ background-color: #555;}
         width: 100%;
        }
 
+/*three links in the footer*/
+#staticinfo {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+    
+#staticinfo a {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: #818181;
+text-decoration: none;
+}
+
+#staticinfo a:hover {
+float: left;
+font-family: 'Antic Slab'; 'sans-serif';
+color: white;
+text-decoration: none;
+}
+
+
+/*copyright info in the footer*/
+.copyright {font-size: 11px;
+	   color: #818181;
+    position: relative;
+    margin-right: 6%;
+            }
+
 </style>
 </head>
 <body>
@@ -377,10 +410,9 @@ background-color: #555;}
 <button id="googlemap">
 MAP
 </button>
-	
-<!--arrow up button-->
-<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>  
 
+<!--arrow up button-->    
+<button onclick="topFunction()" id="arrowup" title="Go to top">^</button>
 
 <!--this divider are the three bits that stay on the left side of the screen-->
 <div id="staticinfo">
@@ -390,7 +422,6 @@ MAP
 <br>
 <a href="references.html">References</a>
 </div>
-
 
 <!--social media icons-->
 <div id="socialmedia">
@@ -408,7 +439,9 @@ MAP
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-<script>
+    <div id="map"></div>
+
+ <script>
 function initMap() {
   
   var tram = {
@@ -478,7 +511,10 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTt4rz4Suek4TMRux1nafUlpnpm1N35M&callback=initMap">
     </script>
+
   </div>
+</div>
+</div>
 </div>
 </div>
 <script>
