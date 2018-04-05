@@ -13,7 +13,7 @@
 		left: 5%;
 		color: black;
 		font-size:20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'helvetica';
 		cursor:pointer;
 	}
 	
@@ -43,7 +43,7 @@
 		padding: 9px 9px 9px 32px;
 		text-decoration: none;
 		font-size: 20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'helvetica';
 		color: #818181;
 		display: block;
 		transition: 0.3s;
@@ -72,7 +72,7 @@
 		opacity: 1;
 		color: black;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'helvetica';
 	}
 	/*styling footer container*/
 	#footer_container {
@@ -85,10 +85,16 @@
 		padding: 20px;
 		color: white;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'helvetica';
 	}
 	
     /*social media graphics*/
+    #socialmedia {
+        position: relative;
+        margin-right: 6%;
+        margin-left: 6%;
+    }
+
 	.fa {
     padding: 10px;
     font-size: 20px;
@@ -98,6 +104,7 @@
     margin: 5px 10px;
     border-radius: 50%;
 	margin-bottom: 10px;
+    z-index: -1;
   }
 	.fa-facebook {
 		background: white;
@@ -125,10 +132,11 @@
 		 background-color: white;
 		 padding-bottom: 60%;
          padding: 20px;
-		 font-family: 'Antic Slab'; 'sans-serif';
+		 font-family: 'Antic Slab'; 'helvetica';
 		 margin: 0;
 		 overflow-x: hidden;
 	}
+
     /*text content styling on venue pages*/
 	.content {
 		     background-color: white;
@@ -162,7 +170,7 @@
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 1;
     padding-top: 100px; 
     left: 0;
     top: 0;
@@ -179,7 +187,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    font-family: 'Antic Slab'; 'sans-serif';
+    font-family: 'Antic Slab'; 'helvetica';
 }
 /* The Close Button */
 .close {
@@ -193,15 +201,16 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    font-family: 'Antic Slab'; 'sans-serif';
+    font-family: 'Antic Slab'; 'helvetica';
 }
 /* Styling for the pop up Google Map */
 #googlemap {
+z-index: 99;
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
     border: none;
-	font-family: 'Antic Slab'; 'sans-serif';
+	font-family: 'Antic Slab'; 'helvetica';
     color: white;
     padding-top: 17px;
 	padding-left: 10px;
@@ -253,26 +262,28 @@ background-color: #555;}
     /*three links in the footer*/
 #staticinfo {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: #818181;
 text-decoration: none;
 }
     
 #staticinfo a {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: #818181;
 text-decoration: none;
 }
 #staticinfo a:hover {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: white;
 text-decoration: none;
 }
 /*copyright info in the footer*/
 .copyright {font-size: 11px;
 	   color: #818181;
+    position: relative;
+    margin-right: 6%;
             }
 </style>
 </head>
@@ -302,7 +313,7 @@ text-decoration: none;
 <!--image grid-->
 <div class="content">
  <img src="North/Mack%203.JPG" alt="Mackintosh Church" style="width:50%">
- <p class="paragraph">Mackintosh Queen’s Cross is a venue for music concerts, seminars, workshops, 
+ <p class="paragraph">Mackintosh Queen's Cross is a venue for music concerts, seminars, workshops, 
  weddings and functions, designed by Charles Rennie Mackintosh. Commissioned by the Free Church in 1896, 
  the church is the only one of its kind in the world, incorporating the Mackintosh Gothic style into 
  traditional religious architecture <a href="http://www.mackintoshchurch.com/">(1).</a>  
@@ -349,26 +360,7 @@ MAP
 <!--arrow up button-->
 <button onclick="topFunction()" id="arrowup" title="Go to top">^</button>  
 
-
-<!--this divider are the three bits that stay on the left side of the screen-->
-<div id="staticinfo">
-<a href="index.html">Home</a>
-<br>
-<a href="aboutpage.html">About</a>
-<br>
-<a href="references.html">References</a>
-</div>
-
-
-<!--social media icons-->
-<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
-<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
-<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
-<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
-<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
-
-    
-<!-- The Modal -->
+    <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
@@ -384,9 +376,30 @@ MAP
 
   </div>
 </div>
+
+<!--this divider are the three bits that stay on the left side of the screen-->
+<div id="staticinfo">
+<a href="index.html">Home</a>
+<br>
+<a href="aboutpage.html">About</a>
+<br>
+<a href="references.html">References</a>
 </div>
+
+
+<!--social media icons-->
+<div id="socialmedia">
+<a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
+<a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 </div>
+<div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
+
+    
+
 </div>
+
 <script>
 // side navigation bar functions
 function openNav() {
