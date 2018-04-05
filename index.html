@@ -21,7 +21,7 @@
   left: 5%;
   color: black;
   font-size: 20px;
-  font-family: 'Antic Slab'; 'sans-serif';
+  font-family: 'Antic Slab'; 'helvetica';
   cursor:pointer;
   }
   
@@ -30,11 +30,11 @@
     font-size:40px;
     font-weight: normal;
     text-align: center;
-    font-family: 'Antic Slab'; 'sans-serif';
+    font-family: 'Antic Slab'; 'helvetica';
   }
   
   p {
-  font-family: 'Antic Slab'; 'sans-serif';
+  font-family: 'Antic Slab'; 'helvetica';
   }
   
   .sidenav {
@@ -54,7 +54,7 @@
     padding: 9px 9px 9px 32px;
     text-decoration: none;
     font-size: 20px;
-  font-family: 'Antic Slab'; 'sans-serif';
+  font-family: 'Antic Slab'; 'helvetica';
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -139,7 +139,7 @@
     border: 1px solid black;
         padding: 8px;
         font-size: 15px;
-        font-family: 'Antic Slab'; 'sans-serif';
+        font-family: 'Antic Slab'; 'helvetica';
     }
   
   #header_container {
@@ -151,53 +151,65 @@
   opacity: 1;
   color: black;
   text-align: center;
-  font-family: 'Antic Slab'; 'sans-serif';
+  font-family: 'Antic Slab'; 'helvetica';
   }
   
-  #footer_container {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-width: 100%;
-    background-color: #3d3c3C;
-    padding: 20px;
-  }
+	/*styling footer container*/	
+	#footer_container {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+        height: 60px;
+		width: 100%;
+		background-color: #3d3c3C;
+		padding: 20px;
+		color: white;
+		text-align: center;
+		font-family: 'Antic Slab'; 'helvetica';
+	}
 
+		/*three links in the footer*/
 #staticinfo {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: #818181;
 text-decoration: none;
 }
     
 #staticinfo a {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: #818181;
 text-decoration: none;
 }
 
 #staticinfo a:hover {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'helvetica';
 color: white;
 text-decoration: none;
 }
 
-#socialmedia {
-    margin-left: 41%;
-    }
 
-  .fa {
- padding: 13px;
+     /*social media graphics*/	
+	
+#socialmedia {
+position: relative;
+    margin-right: 6%;
+    margin-left: 6%;
+	}
+	
+	 .fa {
+    padding: 10px;
     font-size: 20px;
     width: 20px;
     text-align: center;
     text-decoration: none;
     margin: 5px 10px;
     border-radius: 50%;
+	margin-bottom: 10px;
   }
+    
   .fa-facebook {
     background: white;
     color: #3D3C3C;
@@ -217,6 +229,14 @@ text-decoration: none;
     background: white;
     color: #3D3C3C;
   }
+    
+    /*copyright info in the footer*/
+.copyright {font-size: 11px;
+	   color: #818181;
+	position: relative;
+	margin-right: 6%;
+    margin-left: 6%;
+            }
   
 </style>
 </head>
@@ -362,6 +382,7 @@ text-decoration: none;
 
 <!--footer-->
 <div id="footer_container">
+    
 <!--this divider are the three bits that stay on the left side of the screen-->
 <div id="staticinfo">
 <a href="index.html">Home</a>
@@ -370,6 +391,7 @@ text-decoration: none;
 <br>
 <a href="references.html">References</a>
 </div>
+    
 <!--social media icons-->
 <div id="socialmedia">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
@@ -377,7 +399,11 @@ text-decoration: none;
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 </div>
+    
+<div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
+    
 </div>
+    
 <!--svg info box function-->
 <script>
 $("path, circle").hover(function(e) {
