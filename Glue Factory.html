@@ -93,6 +93,7 @@
     #socialmedia {
         position: relative;
     margin-right: 6%;
+margin-left: 6%;
     }
 	.fa {
     padding: 10px;
@@ -202,6 +203,7 @@
 }
 /* Styling for the pop up Google Map */
 #googlemap {
+z-index: 99;
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
@@ -223,6 +225,7 @@ right: 160px;
 #googlemap:hover {
 background-color: #555;}
 /*end of Google Map button styling*/
+
 /*Pull up button that takes you to the top of the page*/
 #arrowup {
   display: none;
@@ -394,12 +397,10 @@ MAP
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk5ufVdBGqDB98BoKzNGmninhZbMBDj1A
     &q=The+Glue+Factory" allowfullscreen>
 </iframe>
-	</center>
   </div>
 </div>
 </div>
-</div>
-</div>
+
 <script>
 // side navigation bar functions
 function openNav() {
