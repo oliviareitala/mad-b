@@ -13,7 +13,7 @@
 		left: 5%;
 		color: black;
 		font-size:20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 		cursor:pointer;
 	}
 	
@@ -43,7 +43,7 @@
 		padding: 9px 9px 9px 32px;
 		text-decoration: none;
 		font-size: 20px;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 		color: #818181;
 		display: block;
 		transition: 0.3s;
@@ -72,7 +72,7 @@
 		opacity: 1;
 		color: black;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
 	/*styling footer container*/
 	#footer_container {
@@ -85,7 +85,7 @@
 		padding: 20px;
 		color: white;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
 	
     /*social media graphics*/		
@@ -126,7 +126,7 @@
 		 background-color: white;
 		 padding-bottom: 60%;
          padding: 20px;
-		 font-family: 'Antic Slab'; 'sans-serif';
+		 font-family: 'Antic Slab'; 'Helvetica';
 		 margin: 0;
 		 overflow-x: hidden;
 	}
@@ -180,7 +180,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    font-family: 'Antic Slab'; 'sans-serif';
+    font-family: 'Antic Slab'; 'Helvetica';
 }
 /* The Close Button */
 .close {
@@ -194,15 +194,16 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    font-family: 'Antic Slab'; 'sans-serif';
+    font-family: 'Antic Slab'; 'Helvetica';
 }
 /* Styling for the pop up Google Map */
 #googlemap {
+	z-index: 99;
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
     border: none;
-	font-family: 'Antic Slab'; 'sans-serif';
+	font-family: 'Antic Slab'; 'Helvetica';
     color: white;
     padding-top: 17px;
 	padding-left: 10px;
@@ -256,32 +257,38 @@ background-color: #555;}
 
 #staticinfo {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: #818181;
 text-decoration: none;
 }
     
 #staticinfo a {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: #818181;
 text-decoration: none;
 }
 	
 #staticinfo a:hover {
 float: left;
-font-family: 'Antic Slab'; 'sans-serif';
+font-family: 'Antic Slab'; 'Helvetica';
 color: white;
 text-decoration: none;
 }
 
+#socialmedia {
+position: relative;
+margin-right: 6%;
+margin-left: 6%;
+}
+	
 /*copyright info in the footer*/
-
 .copyright {font-size: 11px;
 	   color: #818181;
-            }
-
-    
+    position: relative;
+    margin-right: 6%;
+    margin-left: 6%;
+            } 
 </style>
 </head>
 <body>
@@ -366,11 +373,13 @@ MAP
 </div>
 
 <!--social media icons-->
+<div id="socialmedia">
 <a href="https://www.facebook.com/Gimme-5-Glasgow-570309270028469/" class="fa fa-facebook" class="fa fa-facebook"></a>
 <a href="https://twitter.com/Gimme5Glasgow?lang=en" class="fa fa-twitter"></a>
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
-<div class="copyright">© 2018 copyright Gimme 5 Glasgow.</div>
+    </div>
+<div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
     
 <!-- The Modal -->
 <div id="myModal" class="modal">
