@@ -6,27 +6,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
 <style>
-
-       /*upper left side main menu button styling*/
+	    /*upper left side main menu button styling*/
 	#openmenu {
 		position: fixed;
 		top: 5%;
 		left: 5%;
 		color: black;
 		font-size:20px;
-		font-family: 'Antic Slab'; 'helvetica';
+		font-family: 'Antic Slab'; 'Helvetica';
 		cursor:pointer;
 	}
 	
-	    /*styling main heading*/
+    /*styling main heading*/
 	h1 {
 		margin-top: 1.25%;
 		font-size:40px;
 		font-weight: normal;
 		text-align: center;
 	}
-	
-	    /*styling the left side navigation bar*/
+	    
+
+    /*styling the left side navigation bar*/	
 	.sidenav {
 		height: 100%;
 		width: 0;
@@ -44,12 +44,11 @@
 		padding: 9px 9px 9px 32px;
 		text-decoration: none;
 		font-size: 20px;
-		font-family: 'Antic Slab'; 'helvetica';
+		font-family: 'Antic Slab'; 'Helvetica';
 		color: #818181;
 		display: block;
 		transition: 0.3s;
 	}
-
 	.sidenav a:hover {
 		color: white;
 	}
@@ -61,13 +60,12 @@
 		font-size: 36px;
 		margin-left: 50px;
 	}
-
 @media screen and (max-height: 450px) {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 	}
-
-	   /*styling heading container*/	
+	
+    /*styling heading container*/	
 	#header_container {
 		left: 0;
 		top: 0;
@@ -76,10 +74,10 @@
 		opacity: 1;
 		color: black;
 		text-align: center;
-		font-family: 'Antic Slab'; 'sans-serif';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
-
-		/*styling footer container*/
+	
+	/*styling footer container*/	
 	#footer_container {
 		position: absolute;
 		left: 0;
@@ -90,17 +88,10 @@
 		padding: 20px;
 		color: white;
 		text-align: center;
-		font-family: 'Antic Slab'; 'helvetica';
+		font-family: 'Antic Slab'; 'Helvetica';
 	}
 	
-
-    /*social media graphics*/	
-
-    #socialmedia {
-        position: relative;
-        margin-right: 6%;
-        margin-left: 6%;
-}	
+     /*social media graphics*/	
 	 .fa {
     padding: 10px;
     font-size: 20px;
@@ -130,90 +121,85 @@
 		background: white;
 		color: #3D3C3C;
 	}
-
+	
 	img {
 		width: 25%;
 		height: 40%;
 		padding: 1%;
 	}
-
 /* GRID CSS */
-* {
+{
     box-sizing: border-box;
 }
-
 body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 60px;
     padding: 20px;
-    font-family: 'Antic Slab'; 'helvetica';
+    font-family: 'Antic Slab'; 'Helvetica';
     margin: 0;
-    overflow-x: hidden;
+overflow-x: hidden;
 }
-
+	
 /* Center website */
 .main {
 	margin-left: 10%;
 }
-
 .row {
-    float: center;
+    float:center;
 }
-
+	
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
     padding: 8px;
 }
-
+	
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
     width: 40%;
 }
-
+	
 /* Clear floats after rows */ 
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
+	
 /* Content */
 .content {
  background-color: white;
  padding: 10px;
  text-align: center;
 }
-
 #table {min-width: 1000px;
        margin-left: 5%;
        padding-bottom: 15px;}
-
-	/*make links all black*/
+    
+/*make links all black*/
+    
 h3 {
    color: black;
 }
-
 a:link {
         text-decoration: none;
 }
-
+    
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 900px) {
     .column {
         width: 50%;
     }
 }
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
     .column {
         width: 100%;
     }
 }
-/* The Modal (background) this affects the google maps*/
+/* The Modal (background) this affects the google maps */
 .modal {
     display: none; 
     position: fixed; 
@@ -222,12 +208,11 @@ a:link {
     left: 0;
     top: 0;
     width: 100%; 
-    height: 100%; 
+    height: 100%;
     overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
-
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -235,9 +220,8 @@ a:link {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    font-family: 'Antic Slab'; 'helvetica';
+    font-family: 'Antic Slab'; 'Helvetica';
 }
-
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -245,22 +229,22 @@ a:link {
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    font-family: 'Antic Slab'; 'helvetica';
+    font-family: 'Antic Slab'; 'Helvetica';
 }
+	
 /* Styling for the pop up Google Map */
 #googlemap {
-    z-index: 99;
+	z-index:99;
 background-color: #3D3C3C;
 position: absolute;
 right: 160px;
     border: none;
-	font-family: 'Antic Slab'; 'helvetica';
+	font-family: 'Antic Slab'; 'Helvetica';
     color: white;
     padding-top: 17px;
 	padding-left: 10px;
@@ -275,8 +259,10 @@ right: 160px;
 	margin-top: 7px;
 	}
 #googlemap:hover {
-background-color: #555;}
+background-color: #555;
+}
 /*end of google map styling*/
+	
 
 /*Pull up button that takes you to the top of the page*/
 #arrowup {
@@ -297,17 +283,15 @@ background-color: #555;}
   padding-right: 17px;
   border-radius: 4px;
 }
-
 #arrowup:hover {
   background-color: #555;
 }
-
 #map {
         height: 400px;
         width: 100%;
        }
-
-/*three links in the footer*/
+	
+	/*three links in the footer*/
 #staticinfo {
 float: left;
 font-family: 'Antic Slab'; 'helvetica';
@@ -321,15 +305,20 @@ font-family: 'Antic Slab'; 'helvetica';
 color: #818181;
 text-decoration: none;
 }
-
+	
 #staticinfo a:hover {
 float: left;
 font-family: 'Antic Slab'; 'helvetica';
 color: white;
 text-decoration: none;
 }
-
-
+	
+#socialmedia {
+position: relative;
+margin-right: 6%;
+margin-left: 6%;
+}
+	
 /*copyright info in the footer*/
 .copyright {font-size: 11px;
 	   color: #818181;
@@ -337,7 +326,7 @@ text-decoration: none;
     margin-right: 6%;
     margin-left: 6%;
             }
-
+	
 </style>
 </head>
 <body>
@@ -400,7 +389,7 @@ text-decoration: none;
   </div>
   <div class="column">
     <div class="content">
-    <a href="Index.html"><img src="kelvingrove.jpg" alt="Homepage" style="width:100%">
+    <a href="index.html"><img src="kelvingrove.jpg" alt="Homepage" style="width:100%">
       <h3>Homepage </h3></a>
     </div>
   </div>
