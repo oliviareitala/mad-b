@@ -6,7 +6,7 @@
 <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
 <title>Gimme 5 Glasgow</title>
 <style>
-  
+ /*background image and other styling for entire canvas*/
   html {
   background-image: url("indeximage.jpg");
   background-repeat: no-repeat;
@@ -14,11 +14,11 @@
   height: 100%;
   background-position: center;
 }
-
+/*disable scrolling horizontally*/
 	body {
 	overflow-x:hidden;
 	}
-  
+ /*upper left button that opens the side navigation*/
   #openmenu {
   position: fixed;
   top: 5%;
@@ -28,7 +28,7 @@
   font-family: 'Antic Slab'; 'helvetica';
   cursor:pointer;
   }
-  
+  /*styling main heading*/
   h1 {
     margin-top: 2.25%;
     font-size:40px;
@@ -36,11 +36,11 @@
     text-align: center;
     font-family: 'Antic Slab'; 'helvetica';
   }
-  
+  /*styling paragraphs*/
   p {
   font-family: 'Antic Slab'; 'helvetica';
   }
-  
+    /*styling the left side navigation bar*/	
   .sidenav {
     height: 100%;
     width: 0;
@@ -78,7 +78,7 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-  
+ /*controls for the entire map*/
     #districtmap {
         position: fixed;
     width: 90%;
@@ -88,7 +88,8 @@
     margin-top: 1%;
     margin-bottom: 50%;
     }
-  
+/*end of main controls for map*/
+/*individual districts*/
   #citycentre {
   opacity: 0.5;
   }
@@ -133,6 +134,8 @@
         fill: #F69CFF !important;
         cursor: pointer;
     }
+/*end of controls for individual districts*/
+/*hover info box functions*/
     #info-box {
         display: none;
         position: absolute;
@@ -145,7 +148,7 @@
         font-size: 15px;
         font-family: 'Antic Slab'; 'helvetica';
     }
-  
+   /*styling heading container*/
   #header_container {
   position: fixed;
   left: 0;
@@ -367,7 +370,9 @@ position: relative;
 </svg>
 <!--header-->
 <div id="header_container">
+<!--main heading-->
 <h1>GIMME 5 GLASGOW</h1>
+<!--sub heading-->
 <p>G5G exhibits venues in Glasgow that support independent arts.<br> Five districts, five venues each - get exploring!</p>
 </div>
 <!--side navigation divider-->
@@ -403,7 +408,7 @@ position: relative;
 <a href="https://www.pinterest.co.uk/gimme5glasgow/pins/" class="fa fa-pinterest"></a>
 <a href="https://www.instagram.com/gimme5glasgow/" class="fa fa-instagram"></a>
 </div>
-    
+  <!--copyright bit-->
 <div class="copyright">(c) 2018 copyright Gimme 5 Glasgow.</div>
     
 </div>
@@ -429,7 +434,7 @@ if(ios) {
     return false;
   });
 }
-<!--side navigation bar functions-->
+// side navigation bar functions
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
